@@ -1,0 +1,92 @@
+/**
+ * glass.css — Shared glass surface recipe
+ *
+ * The single canonical `.lucent-glass` recipe. No component hardcodes opacity or blur.
+ * Every glass surface (Card, Dialog, Popover, Tooltip, Toast, ThemePanel…) uses this class.
+ *
+ * Design decisions:
+ *   D-11: -webkit- prefix + @supports opaque fallback + token-capped blur
+ *   D-19: luminous edge hairline highlight
+ *   D-10/D-10a: solid / prefers-contrast / forced-colors collapsing to opaque
+ *   D-13/FND-08: logical properties only (stylelint guards physical props)
+ */
+
+/* ─── Base glass recipe ──────────────────────────────────────────────────── */
+
+.lucent-glass {
+  /* Surface tint: reads glass-opacity from the runtime token */
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+
+  /* Backdrop blur — capped at 24px per FND constraint and Pitfall 2 */
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+          backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+
+  /* Border using glass opacity for a translucent edge */
+  border: 1px solid hsl(var(--lucent-border) / var(--lucent-glass-opacity));
+
+  /* Signature luminous edge + shadow depth (D-19) */
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-md);
+
+  /* Radius from the semantic token */
+  border-radius: var(--lucent-radius-lg);
+
+  /* Focus ring (visible over glass — glass can swallow native outlines) */
+}
+
+.lucent-glass:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-md), var(--lucent-focus-ring);
+}
+
+/* ─── @supports opaque fallback ─────────────────────────────────────────── */
+/* When backdrop-filter is not supported, render an opaque surface.
+ * This ensures readability regardless of blur support.
+ * Pitfall 2: backdrop-root trap is documented for consumers (no transform/opacity ancestors). */
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .lucent-glass {
+    background: hsl(var(--lucent-surface));
+    border: 1px solid hsl(var(--lucent-border));
+  }
+}
+
+/* ─── Solid / high-contrast mode (FND-04, D-10a) ─────────────────────────── */
+/* Collapse glass to fully opaque for accessibility.
+ * Triggered by: explicit data-contrast="solid", prefers-contrast: more, or forced-colors.
+ * The solid mode sidesteps the contrast-floor entirely. */
+
+[data-contrast="solid"] .lucent-glass,
+:root[data-contrast="solid"] .lucent-glass {
+  --lucent-glass-opacity: 1;
+  --lucent-glass-blur: 0px;
+  background: hsl(var(--lucent-surface));
+  border: 1px solid hsl(var(--lucent-border));
+}
+
+@media (prefers-contrast: more) {
+  .lucent-glass {
+    --lucent-glass-opacity: 1;
+    --lucent-glass-blur: 0px;
+    background: hsl(var(--lucent-surface));
+    border: 2px solid hsl(var(--lucent-border));
+  }
+}
+
+/* ─── forced-colors (Windows High Contrast) ─────────────────────────────── */
+/* Collapse to system colors; keep border for visible edge (FND-04, D-10). */
+
+@media (forced-colors: active) {
+  .lucent-glass {
+    background: Canvas;
+    border: 1px solid ButtonBorder;
+    color: CanvasText;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    box-shadow: none;
+  }
+  .lucent-glass:focus-visible {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+}

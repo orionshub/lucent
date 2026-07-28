@@ -1,6 +1,13 @@
 import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    // Native Vite 8 tsconfig path resolution (replaces vite-tsconfig-paths plugin).
+    tsconfigPaths: true,
+    extensions: ['.mts', '.mjs', '.ts', '.tsx', '.js', '.jsx', '.json'],
+  },
   test: {
     // Default project: happy-dom browser environment for component tests
     projects: [

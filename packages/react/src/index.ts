@@ -7,4 +7,4 @@
  * This barrel is the stub for now; the full public API surface
  * is assembled in Phase 1 plan 01-09 once all modules exist.
  */
-export { cx } from './utils/cx.js';
+export { cx } from './utils/cx';
