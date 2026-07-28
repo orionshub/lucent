@@ -1,0 +1,7 @@
+/* POSITIVE fixture: uses logical properties only
+ * This file MUST pass the stylelint RTL guard.
+ * DO NOT add to src/** (only test/fixtures/).
+ */
+.test-logical {
+  margin-inline-start: 1rem;
+}

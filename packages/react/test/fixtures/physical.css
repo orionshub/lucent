@@ -1,0 +1,7 @@
+/* NEGATIVE fixture: uses physical property margin-left
+ * This file MUST trip the stylelint RTL guard.
+ * DO NOT add to src/** (only test/fixtures/).
+ */
+.test-physical {
+  margin-left: 1rem;
+}
