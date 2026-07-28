@@ -1,0 +1,21 @@
+{
+  "name": "lucent",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.13.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm --filter @lucent/react build",
+    "test": "pnpm --filter @lucent/react test",
+    "ci": "pnpm --filter @lucent/react ci",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.31.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}
