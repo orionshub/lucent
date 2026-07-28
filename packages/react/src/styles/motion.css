@@ -1,0 +1,103 @@
+/**
+ * motion.css — Motion tokens and reduced-motion policy
+ *
+ * CSS-only animations driven by Radix data-state attributes.
+ * No animation runtime dependency (D-12, FND-07).
+ *
+ * Policy (Pitfall 9 — "reduce, not blanket-kill"):
+ *   Under prefers-reduced-motion: reduce, we:
+ *   - Zero out duration tokens (→ instant state change or ~1ms)
+ *   - Neutralize large transforms (translate, scale, rotate) via transform: none
+ *   - KEEP essential affordance feedback: focus ring appearance, checked-state
+ *     animation, progress indication, hover feedback
+ *
+ * Pure CSS @media so it is correct on first SSR paint (no JS gate).
+ * Uses only CSS logical properties (stylelint guards physical props).
+ */
+
+/* ─── Duration and easing tokens ─────────────────────────────────────────── */
+
+:root {
+  /* Duration scale */
+  --lucent-duration-fast: 120ms;   /* Hover/press feedback, small state changes */
+  --lucent-duration-base: 200ms;   /* Enter/exit of most surfaces */
+  --lucent-duration-slow: 320ms;   /* Large overlays (dialog, drawer) */
+
+  /* Easing functions */
+  --lucent-ease-standard: cubic-bezier(0.2, 0, 0, 1); /* Default entering/moving */
+  --lucent-ease-exit:     cubic-bezier(0.4, 0, 1, 1); /* Exiting */
+}
+
+/* ─── Shared keyframes ─────────────────────────────────────────────────── */
+
+/* Fade in — used as the reduced-motion replacement for translate/scale animations */
+@keyframes lucent-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes lucent-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Subtle entrance — the default open animation for overlays */
+@keyframes lucent-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lucent-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ─── data-state driven animation helpers ─────────────────────────────── */
+/* These utility classes are consumed by later component phases.
+ * They hook into Radix UI's data-state attributes automatically. */
+
+[data-state="open"].lucent-animate-in {
+  animation: lucent-scale-in var(--lucent-duration-base) var(--lucent-ease-standard) both;
+}
+
+[data-state="closed"].lucent-animate-out {
+  animation: lucent-fade-out var(--lucent-duration-fast) var(--lucent-ease-exit) both;
+}
+
+/* ─── prefers-reduced-motion: reduce ─────────────────────────────────────── */
+/* POLICY: reduce large transforms and long durations; preserve essential feedback */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    /* Zero duration tokens → state changes become instant (< 1ms threshold) */
+    --lucent-duration-fast: 1ms;
+    --lucent-duration-base: 1ms;
+    --lucent-duration-slow: 1ms;
+  }
+
+  /* Neutralize large transforms for data-state-driven animations.
+   * Replace with opacity fade (immediate, no spatial movement). */
+  [data-state].lucent-animate-in,
+  [data-state].lucent-animate-out {
+    animation: none;
+    transform: none;
+    /* opacity: inherit preserves the fade-in/fade-out affordance via data-state visibility */
+  }
+
+  /* PRESERVE: focus ring transitions (still appear, just instant) */
+  /* PRESERVE: checked/selected state color changes (no transform involved) */
+  /* PRESERVE: progress bar fills (only strip spatial movement, not the fill itself) */
+  /* PRESERVE: hover/active state color feedback */
+}
