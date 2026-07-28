@@ -1,0 +1,52 @@
+{
+  "lucent": {
+    "bg":                 { "value": "{lucent.color.dark.bg}",      "comment": "Page background (dark default, 60%)" },
+    "surface":            { "value": "{lucent.color.dark.surface}", "comment": "Glass surface (dark default, 30%)" },
+    "overlay":            { "value": "{lucent.color.dark.overlay}", "comment": "Elevated overlay surfaces" },
+    "on-bg":              { "value": "{lucent.color.ink.100}",      "comment": "Text on page background" },
+    "on-surface":         { "value": "{lucent.color.ink.100}",      "comment": "Primary text on glass surface" },
+    "on-surface-muted":   { "value": "{lucent.color.ink.400}",      "comment": "Secondary text, captions, placeholders" },
+    "accent":             { "value": "{lucent.color.cyan.500}",     "comment": "Cyan accent (default preset — runtime swappable via data-accent)" },
+    "on-accent":          { "value": "225 40% 8%",                  "comment": "Dark ink on bright accent" },
+    "border":             { "value": "{lucent.color.ink.700}",      "comment": "Hairline borders on glass" },
+    "danger":             { "value": "{lucent.color.danger}",       "comment": "Destructive/error actions only" },
+    "on-danger":          { "value": "{lucent.color.ink.100}",      "comment": "Text on danger background" },
+    "glass-opacity":      { "value": "{lucent.glass.opacity.default}", "comment": "Runtime knob (0.60–1.0) — the accessibility differentiator" },
+    "glass-blur":         { "value": "{lucent.blur.md}",            "comment": "Glass blur (default 12px, capped at 24px)" },
+    "control-h":          { "value": "{lucent.control.h.airy}",     "comment": "Control height — airy default (44px)" },
+    "edge":               {
+      "value": "inset 0 1px 0 0 hsl(var(--lucent-accent) / 0.18), inset 0 0 0 1px hsl(0 0% 100% / 0.04)",
+      "comment": "Luminous edge / hairline highlight — Lucent's signature (D-19)"
+    },
+    "focus-ring":         {
+      "value": "0 0 0 2px hsl(var(--lucent-bg)), 0 0 0 4px hsl(var(--lucent-accent))",
+      "comment": "Focus ring visible over glass (2px gap, accent ring)"
+    },
+    "type": {
+      "display":  {
+        "size":     { "value": "{lucent.type.size.28}",       "comment": "Component-facing (28px) — 36px is internal-only" },
+        "weight":   { "value": "{lucent.type.weight.semibold}" },
+        "leading":  { "value": "{lucent.type.leading.tight}" },
+        "tracking": { "value": "{lucent.type.tracking.tight}" }
+      },
+      "heading":  {
+        "size":     { "value": "{lucent.type.size.20}",       "comment": "Component-facing (20px)" },
+        "weight":   { "value": "{lucent.type.weight.semibold}" },
+        "leading":  { "value": "{lucent.type.leading.snug}" },
+        "tracking": { "value": "{lucent.type.tracking.snug}" }
+      },
+      "body":     {
+        "size":     { "value": "{lucent.type.size.16}",       "comment": "Component-facing (16px)" },
+        "weight":   { "value": "{lucent.type.weight.regular}" },
+        "leading":  { "value": "{lucent.type.leading.normal}" },
+        "tracking": { "value": "{lucent.type.tracking.normal}" }
+      },
+      "label":    {
+        "size":     { "value": "{lucent.type.size.14}",       "comment": "Component-facing (14px) — 12px is internal-only" },
+        "weight":   { "value": "{lucent.type.weight.semibold}" },
+        "leading":  { "value": "{lucent.type.leading.snug}" },
+        "tracking": { "value": "{lucent.type.tracking.normal}" }
+      }
+    }
+  }
+}

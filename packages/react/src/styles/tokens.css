@@ -1,0 +1,135 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --lucent-color-cyan-50: 190 95% 97%; /** HSL channel triplet (no hsl() wrapper) */
+  --lucent-color-cyan-100: 190 90% 90%;
+  --lucent-color-cyan-200: 190 88% 78%;
+  --lucent-color-cyan-300: 190 92% 66%;
+  --lucent-color-cyan-400: 190 94% 60%;
+  --lucent-color-cyan-500: 190 95% 55%; /** Cyan accent default */
+  --lucent-color-cyan-600: 190 88% 44%;
+  --lucent-color-cyan-700: 190 85% 34%;
+  --lucent-color-cyan-800: 190 82% 24%;
+  --lucent-color-cyan-900: 190 78% 14%;
+  --lucent-color-violet-50: 265 90% 97%;
+  --lucent-color-violet-100: 265 88% 90%;
+  --lucent-color-violet-200: 265 85% 80%;
+  --lucent-color-violet-300: 265 88% 72%;
+  --lucent-color-violet-400: 265 90% 69%;
+  --lucent-color-violet-500: 265 90% 66%; /** Violet accent preset */
+  --lucent-color-violet-600: 265 88% 56%;
+  --lucent-color-violet-700: 265 84% 46%;
+  --lucent-color-violet-800: 265 80% 32%;
+  --lucent-color-violet-900: 265 75% 18%;
+  --lucent-color-teal-50: 168 80% 96%;
+  --lucent-color-teal-100: 168 76% 86%;
+  --lucent-color-teal-200: 168 78% 74%;
+  --lucent-color-teal-300: 168 78% 62%;
+  --lucent-color-teal-400: 168 80% 54%;
+  --lucent-color-teal-500: 168 80% 46%; /** Teal accent preset */
+  --lucent-color-teal-600: 168 78% 37%;
+  --lucent-color-teal-700: 168 75% 28%;
+  --lucent-color-teal-800: 168 72% 19%;
+  --lucent-color-teal-900: 168 68% 10%;
+  --lucent-color-ink-50: 210 20% 98%;
+  --lucent-color-ink-100: 210 20% 96%;
+  --lucent-color-ink-200: 215 15% 88%;
+  --lucent-color-ink-300: 215 15% 80%;
+  --lucent-color-ink-400: 215 15% 72%;
+  --lucent-color-ink-500: 220 15% 56%;
+  --lucent-color-ink-600: 220 18% 40%;
+  --lucent-color-ink-700: 220 20% 26%;
+  --lucent-color-ink-800: 222 26% 18%;
+  --lucent-color-ink-900: 222 30% 14%;
+  --lucent-color-dark-bg: 225 30% 7%; /** Deepest bg layer */
+  --lucent-color-dark-surface: 225 24% 12%; /** Glass surface dark default */
+  --lucent-color-dark-overlay: 225 26% 10%; /** Elevated overlay surfaces */
+  --lucent-color-light-bg: 210 40% 98%; /** Light theme page bg */
+  --lucent-color-light-surface: 210 40% 100%; /** Light glass surface */
+  --lucent-color-light-overlay: 210 36% 97%;
+  --lucent-color-danger: 2 80% 62%; /** Destructive/error only */
+  --lucent-space-0: 0px;
+  --lucent-space-1: 4px; /** xs — micro gaps */
+  --lucent-space-2: 8px; /** sm — compact element spacing */
+  --lucent-space-3: 12px; /** base — density-axis control padding */
+  --lucent-space-4: 16px; /** lg — default element spacing */
+  --lucent-space-6: 24px;
+  --lucent-space-8: 32px;
+  --lucent-space-12: 48px;
+  --lucent-space-16: 64px; /** 4xl — page-level spacing */
+  --lucent-radius-xs: 6px; /** Chips, Kbd, small inline controls */
+  --lucent-radius-md: 10px; /** Buttons, inputs, default controls */
+  --lucent-radius-lg: 14px; /** Cards, popovers, dropdowns */
+  --lucent-radius-xl: 20px; /** Dialogs, large glass panels */
+  --lucent-radius-pill: 9999px; /** Pills, avatars, switches */
+  --lucent-blur-none: 0px;
+  --lucent-blur-sm: 8px;
+  --lucent-blur-md: 12px; /** Default — subtle frost (D-18) */
+  --lucent-blur-lg: 20px; /** Pronounced blur option (D-18) */
+  --lucent-blur-max: 24px; /** Hard cap (perf, Pitfall 2) */
+  --lucent-glass-opacity-default: 0.72; /** Dark default — meets 4.5:1 over worst-case white */
+  --lucent-glass-opacity-light: 0.78; /** Light default */
+  --lucent-glass-opacity-min: 0.60; /** Hard floor — 3:1 universal, 4.5:1 for non-lighter backdrops */
+  --lucent-glass-opacity-solid: 1.0; /** Solid/high-contrast mode */
+  --lucent-shadow-sm: 0 1px 2px hsl(225 40% 3% / 0.4); /** Resting cards, badges */
+  --lucent-shadow-md: 0 6px 20px hsl(225 40% 3% / 0.45); /** Popovers, dropdowns, raised cards */
+  --lucent-shadow-lg: 0 16px 48px hsl(225 40% 3% / 0.55); /** Dialogs, command surfaces */
+  --lucent-duration-fast: 120ms; /** Hover/press feedback, small state changes */
+  --lucent-duration-base: 200ms; /** Enter/exit of most surfaces */
+  --lucent-duration-slow: 320ms; /** Large overlays (dialog, drawer) */
+  --lucent-ease-standard: cubic-bezier(0.2, 0, 0, 1); /** Default entering/moving */
+  --lucent-ease-exit: cubic-bezier(0.4, 0, 1, 1); /** Exiting */
+  --lucent-control-h-airy: 44px; /** WCAG 2.5.5 touch target minimum */
+  --lucent-control-h-balanced: 40px;
+  --lucent-control-h-compact: 32px;
+  --lucent-font-sans: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /** System-first grotesk stack; zero bundled fonts (D-16) */
+  --lucent-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+  --lucent-type-size-12: 12px; /** INTERNAL-ONLY primitive — maps to no semantic role, never component-facing (UI checker note) */
+  --lucent-type-size-14: 14px;
+  --lucent-type-size-16: 16px;
+  --lucent-type-size-20: 20px;
+  --lucent-type-size-28: 28px;
+  --lucent-type-size-36: 36px; /** INTERNAL-ONLY primitive — maps to no semantic role, never component-facing (UI checker note) */
+  --lucent-type-weight-regular: 400;
+  --lucent-type-weight-semibold: 600;
+  --lucent-type-leading-tight: 1.2;
+  --lucent-type-leading-snug: 1.25;
+  --lucent-type-leading-normal: 1.5;
+  --lucent-type-tracking-tight: -0.01em;
+  --lucent-type-tracking-snug: -0.005em;
+  --lucent-type-tracking-normal: 0;
+  --lucent-on-accent: 225 40% 8%; /** Dark ink on bright accent */
+  --lucent-edge: inset 0 1px 0 0 hsl(var(--lucent-accent) / 0.18), inset 0 0 0 1px hsl(0 0% 100% / 0.04); /** Luminous edge / hairline highlight — Lucent's signature (D-19) */
+  --lucent-focus-ring: 0 0 0 2px hsl(var(--lucent-bg)), 0 0 0 4px hsl(var(--lucent-accent)); /** Focus ring visible over glass (2px gap, accent ring) */
+  --lucent-type-display-size: var(--lucent-type-size-28); /** Component-facing (28px) — 36px is internal-only */
+  --lucent-type-display-weight: var(--lucent-type-weight-semibold);
+  --lucent-type-display-leading: var(--lucent-type-leading-tight);
+  --lucent-type-display-tracking: var(--lucent-type-tracking-tight);
+  --lucent-type-heading-size: var(--lucent-type-size-20); /** Component-facing (20px) */
+  --lucent-type-heading-weight: var(--lucent-type-weight-semibold);
+  --lucent-type-heading-leading: var(--lucent-type-leading-snug);
+  --lucent-type-heading-tracking: var(--lucent-type-tracking-snug);
+  --lucent-type-body-size: var(--lucent-type-size-16); /** Component-facing (16px) */
+  --lucent-type-body-weight: var(--lucent-type-weight-regular);
+  --lucent-type-body-leading: var(--lucent-type-leading-normal);
+  --lucent-type-body-tracking: var(--lucent-type-tracking-normal);
+  --lucent-type-label-size: var(--lucent-type-size-14); /** Component-facing (14px) — 12px is internal-only */
+  --lucent-type-label-weight: var(--lucent-type-weight-semibold);
+  --lucent-type-label-leading: var(--lucent-type-leading-snug);
+  --lucent-type-label-tracking: var(--lucent-type-tracking-normal);
+  --lucent-bg: var(--lucent-color-dark-bg); /** Page background (dark default, 60%) */
+  --lucent-surface: var(--lucent-color-dark-surface); /** Glass surface (dark default, 30%) */
+  --lucent-overlay: var(--lucent-color-dark-overlay); /** Elevated overlay surfaces */
+  --lucent-on-bg: var(--lucent-color-ink-100); /** Text on page background */
+  --lucent-on-surface: var(--lucent-color-ink-100); /** Primary text on glass surface */
+  --lucent-on-surface-muted: var(--lucent-color-ink-400); /** Secondary text, captions, placeholders */
+  --lucent-accent: var(--lucent-color-cyan-500); /** Cyan accent (default preset — runtime swappable via data-accent) */
+  --lucent-border: var(--lucent-color-ink-700); /** Hairline borders on glass */
+  --lucent-danger: var(--lucent-color-danger); /** Destructive/error actions only */
+  --lucent-on-danger: var(--lucent-color-ink-100); /** Text on danger background */
+  --lucent-glass-opacity: var(--lucent-glass-opacity-default); /** Runtime knob (0.60–1.0) — the accessibility differentiator */
+  --lucent-glass-blur: var(--lucent-blur-md); /** Glass blur (default 12px, capped at 24px) */
+  --lucent-control-h: var(--lucent-control-h-airy); /** Control height — airy default (44px) */
+}

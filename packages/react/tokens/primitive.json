@@ -1,0 +1,152 @@
+{
+  "lucent": {
+    "color": {
+      "cyan": {
+        "50":  { "value": "190 95% 97%", "comment": "HSL channel triplet (no hsl() wrapper)" },
+        "100": { "value": "190 90% 90%" },
+        "200": { "value": "190 88% 78%" },
+        "300": { "value": "190 92% 66%" },
+        "400": { "value": "190 94% 60%" },
+        "500": { "value": "190 95% 55%", "comment": "Cyan accent default" },
+        "600": { "value": "190 88% 44%" },
+        "700": { "value": "190 85% 34%" },
+        "800": { "value": "190 82% 24%" },
+        "900": { "value": "190 78% 14%" }
+      },
+      "violet": {
+        "50":  { "value": "265 90% 97%" },
+        "100": { "value": "265 88% 90%" },
+        "200": { "value": "265 85% 80%" },
+        "300": { "value": "265 88% 72%" },
+        "400": { "value": "265 90% 69%" },
+        "500": { "value": "265 90% 66%", "comment": "Violet accent preset" },
+        "600": { "value": "265 88% 56%" },
+        "700": { "value": "265 84% 46%" },
+        "800": { "value": "265 80% 32%" },
+        "900": { "value": "265 75% 18%" }
+      },
+      "teal": {
+        "50":  { "value": "168 80% 96%" },
+        "100": { "value": "168 76% 86%" },
+        "200": { "value": "168 78% 74%" },
+        "300": { "value": "168 78% 62%" },
+        "400": { "value": "168 80% 54%" },
+        "500": { "value": "168 80% 46%", "comment": "Teal accent preset" },
+        "600": { "value": "168 78% 37%" },
+        "700": { "value": "168 75% 28%" },
+        "800": { "value": "168 72% 19%" },
+        "900": { "value": "168 68% 10%" }
+      },
+      "ink": {
+        "50":  { "value": "210 20% 98%" },
+        "100": { "value": "210 20% 96%" },
+        "200": { "value": "215 15% 88%" },
+        "300": { "value": "215 15% 80%" },
+        "400": { "value": "215 15% 72%" },
+        "500": { "value": "220 15% 56%" },
+        "600": { "value": "220 18% 40%" },
+        "700": { "value": "220 20% 26%" },
+        "800": { "value": "222 26% 18%" },
+        "900": { "value": "222 30% 14%" }
+      },
+      "dark": {
+        "bg":      { "value": "225 30% 7%", "comment": "Deepest bg layer" },
+        "surface": { "value": "225 24% 12%", "comment": "Glass surface dark default" },
+        "overlay": { "value": "225 26% 10%", "comment": "Elevated overlay surfaces" }
+      },
+      "light": {
+        "bg":      { "value": "210 40% 98%", "comment": "Light theme page bg" },
+        "surface": { "value": "210 40% 100%", "comment": "Light glass surface" },
+        "overlay": { "value": "210 36% 97%" }
+      },
+      "danger": { "value": "2 80% 62%", "comment": "Destructive/error only" }
+    },
+    "space": {
+      "0":  { "value": "0px" },
+      "1":  { "value": "4px",  "comment": "xs — micro gaps" },
+      "2":  { "value": "8px",  "comment": "sm — compact element spacing" },
+      "3":  { "value": "12px", "comment": "base — density-axis control padding" },
+      "4":  { "value": "16px", "comment": "lg — default element spacing" },
+      "6":  { "value": "24px" },
+      "8":  { "value": "32px" },
+      "12": { "value": "48px" },
+      "16": { "value": "64px", "comment": "4xl — page-level spacing" }
+    },
+    "radius": {
+      "xs":   { "value": "6px",    "comment": "Chips, Kbd, small inline controls" },
+      "md":   { "value": "10px",   "comment": "Buttons, inputs, default controls" },
+      "lg":   { "value": "14px",   "comment": "Cards, popovers, dropdowns" },
+      "xl":   { "value": "20px",   "comment": "Dialogs, large glass panels" },
+      "pill": { "value": "9999px", "comment": "Pills, avatars, switches" }
+    },
+    "blur": {
+      "none": { "value": "0px" },
+      "sm":   { "value": "8px" },
+      "md":   { "value": "12px", "comment": "Default — subtle frost (D-18)" },
+      "lg":   { "value": "20px", "comment": "Pronounced blur option (D-18)" },
+      "max":  { "value": "24px", "comment": "Hard cap (perf, Pitfall 2)" }
+    },
+    "glass": {
+      "opacity": {
+        "default": { "value": "0.72", "comment": "Dark default — meets 4.5:1 over worst-case white" },
+        "light":   { "value": "0.78", "comment": "Light default" },
+        "min":     { "value": "0.60", "comment": "Hard floor — 3:1 universal, 4.5:1 for non-lighter backdrops" },
+        "solid":   { "value": "1.0",  "comment": "Solid/high-contrast mode" }
+      }
+    },
+    "shadow": {
+      "sm": { "value": "0 1px 2px hsl(225 40% 3% / 0.4)",   "comment": "Resting cards, badges" },
+      "md": { "value": "0 6px 20px hsl(225 40% 3% / 0.45)", "comment": "Popovers, dropdowns, raised cards" },
+      "lg": { "value": "0 16px 48px hsl(225 40% 3% / 0.55)","comment": "Dialogs, command surfaces" }
+    },
+    "duration": {
+      "fast": { "value": "120ms", "comment": "Hover/press feedback, small state changes" },
+      "base": { "value": "200ms", "comment": "Enter/exit of most surfaces" },
+      "slow": { "value": "320ms", "comment": "Large overlays (dialog, drawer)" }
+    },
+    "ease": {
+      "standard": { "value": "cubic-bezier(0.2, 0, 0, 1)", "comment": "Default entering/moving" },
+      "exit":     { "value": "cubic-bezier(0.4, 0, 1, 1)", "comment": "Exiting" }
+    },
+    "control": {
+      "h": {
+        "airy":     { "value": "44px", "comment": "WCAG 2.5.5 touch target minimum" },
+        "balanced": { "value": "40px" },
+        "compact":  { "value": "32px" }
+      }
+    },
+    "font": {
+      "sans": {
+        "value": "\"Space Grotesk\", ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+        "comment": "System-first grotesk stack; zero bundled fonts (D-16)"
+      },
+      "mono": {
+        "value": "ui-monospace, \"Cascadia Code\", \"Source Code Pro\", Menlo, Consolas, monospace"
+      }
+    },
+    "type": {
+      "size": {
+        "12": { "value": "12px", "comment": "INTERNAL-ONLY primitive — maps to no semantic role, never component-facing (UI checker note)" },
+        "14": { "value": "14px" },
+        "16": { "value": "16px" },
+        "20": { "value": "20px" },
+        "28": { "value": "28px" },
+        "36": { "value": "36px", "comment": "INTERNAL-ONLY primitive — maps to no semantic role, never component-facing (UI checker note)" }
+      },
+      "weight": {
+        "regular": { "value": "400" },
+        "semibold": { "value": "600" }
+      },
+      "leading": {
+        "tight":  { "value": "1.2" },
+        "snug":   { "value": "1.25" },
+        "normal": { "value": "1.5" }
+      },
+      "tracking": {
+        "tight":    { "value": "-0.01em" },
+        "snug":     { "value": "-0.005em" },
+        "normal":   { "value": "0" }
+      }
+    }
+  }
+}

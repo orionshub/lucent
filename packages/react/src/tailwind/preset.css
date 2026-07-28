@@ -1,0 +1,34 @@
+@theme {
+  --lucent-type-display-size: var(--lucent-type-display-size);
+  --lucent-type-display-weight: var(--lucent-type-display-weight);
+  --lucent-type-display-leading: var(--lucent-type-display-leading);
+  --lucent-type-display-tracking: var(--lucent-type-display-tracking);
+  --lucent-type-heading-size: var(--lucent-type-heading-size);
+  --lucent-type-heading-weight: var(--lucent-type-heading-weight);
+  --lucent-type-heading-leading: var(--lucent-type-heading-leading);
+  --lucent-type-heading-tracking: var(--lucent-type-heading-tracking);
+  --lucent-type-body-size: var(--lucent-type-body-size);
+  --lucent-type-body-weight: var(--lucent-type-body-weight);
+  --lucent-type-body-leading: var(--lucent-type-body-leading);
+  --lucent-type-body-tracking: var(--lucent-type-body-tracking);
+  --lucent-type-label-size: var(--lucent-type-label-size);
+  --lucent-type-label-weight: var(--lucent-type-label-weight);
+  --lucent-type-label-leading: var(--lucent-type-label-leading);
+  --lucent-type-label-tracking: var(--lucent-type-label-tracking);
+  --lucent-bg: hsl(var(--lucent-bg) / <alpha-value>);
+  --lucent-surface: hsl(var(--lucent-surface) / <alpha-value>);
+  --lucent-overlay: hsl(var(--lucent-overlay) / <alpha-value>);
+  --lucent-on-bg: hsl(var(--lucent-on-bg) / <alpha-value>);
+  --lucent-on-surface: hsl(var(--lucent-on-surface) / <alpha-value>);
+  --lucent-on-surface-muted: hsl(var(--lucent-on-surface-muted) / <alpha-value>);
+  --lucent-accent: hsl(var(--lucent-accent) / <alpha-value>);
+  --lucent-on-accent: hsl(var(--lucent-on-accent) / <alpha-value>);
+  --lucent-border: hsl(var(--lucent-border) / <alpha-value>);
+  --lucent-danger: hsl(var(--lucent-danger) / <alpha-value>);
+  --lucent-on-danger: hsl(var(--lucent-on-danger) / <alpha-value>);
+  --lucent-glass-opacity: var(--lucent-glass-opacity);
+  --lucent-glass-blur: var(--lucent-glass-blur);
+  --lucent-control-h: var(--lucent-control-h);
+  --lucent-edge: var(--lucent-edge);
+  --lucent-focus-ring: var(--lucent-focus-ring);
+}

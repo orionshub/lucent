@@ -1,0 +1,13 @@
+﻿/* Light theme override — remaps semantic tokens for light backgrounds.
+ * Values from UI-SPEC.md §Color, §Glass & Blur Tokens (D-15).
+ */
+[data-theme="light"] {
+  --lucent-bg: var(--lucent-color-light-bg);
+  --lucent-surface: var(--lucent-color-light-surface);
+  --lucent-overlay: var(--lucent-color-light-overlay);
+  --lucent-on-bg: var(--lucent-color-ink-900);
+  --lucent-on-surface: var(--lucent-color-ink-900);
+  --lucent-on-surface-muted: var(--lucent-color-ink-500);
+  --lucent-border: var(--lucent-color-ink-200);
+  --lucent-glass-opacity: var(--lucent-glass-opacity-light);
+}

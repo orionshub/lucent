@@ -1,0 +1,29 @@
+/**
+ * @lucent/react/fonts.css — opt-in font face declarations
+ *
+ * Consumers import this ONLY if they want to self-host Space Grotesk.
+ * Zero bytes in the core bundle — never imported by @lucent/react itself.
+ *
+ * The system-first fallback stack in --lucent-font-sans works without this.
+ * For best results, also add <link rel="preload"> for the woff2 files.
+ *
+ * Usage (in app root):
+ *   import '@lucent/react/fonts.css';
+ */
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  /* Self-hosted; consumers provide the font files */
+  src: local("Space Grotesk");
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Space Grotesk");
+}

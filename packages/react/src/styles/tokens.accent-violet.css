@@ -1,0 +1,7 @@
+﻿/* Violet accent preset — via data-accent="violet" on <html>.
+ * Values from UI-SPEC.md §Accent presets (D-15).
+ */
+[data-accent="violet"] {
+  --lucent-accent: var(--lucent-color-violet-500);
+  --lucent-on-accent: 265 40% 10%;
+}

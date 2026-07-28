@@ -1,0 +1,6 @@
+﻿/* Compact density — via data-density="compact" on <html>.
+ * Values from UI-SPEC.md §Density Axis (D-20).
+ */
+[data-density="compact"] {
+  --lucent-control-h: var(--lucent-control-h-compact);
+}
