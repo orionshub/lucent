@@ -1,0 +1,124 @@
+/**
+ * ThemePanel.css — Styles for the prebuilt theming/accessibility panel
+ *
+ * Delivered to dist/theme/ThemePanel.css by scripts/post-build.mjs
+ * and exposed via the `./theme.css` subpath export.
+ *
+ * Consumers import separately:
+ *   import '@lucent/react/theme.css';
+ *
+ * All properties use CSS logical equivalents (stylelint enforces this).
+ * Spacing consumes density-aware tokens.
+ */
+
+.lucent-theme-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lucent-space-4, 16px);
+  padding: var(--lucent-space-4, 16px);
+  min-inline-size: 260px;
+  max-inline-size: 360px;
+  font-family: var(--lucent-font-sans);
+  font-size: 14px;
+  line-height: 1.4;
+  color: hsl(var(--lucent-on-surface));
+}
+
+/* ─── Section layout ─────────────────────────────────────────────────────── */
+
+.lucent-panel-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lucent-space-1, 4px);
+}
+
+/* ─── Labels ─────────────────────────────────────────────────────────────── */
+
+.lucent-panel-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  color: hsl(var(--lucent-on-surface));
+}
+
+.lucent-panel-value {
+  font-weight: 400;
+  color: hsl(var(--lucent-on-surface-muted));
+  font-size: 12px;
+}
+
+/* ─── Inputs ─────────────────────────────────────────────────────────────── */
+
+.lucent-panel-select,
+.lucent-panel-slider {
+  inline-size: 100%;
+  accent-color: hsl(var(--lucent-accent));
+}
+
+.lucent-panel-select {
+  padding-block: var(--lucent-space-1, 4px);
+  padding-inline: var(--lucent-space-2, 8px);
+  border: 1px solid hsl(var(--lucent-border));
+  border-radius: var(--lucent-radius-md);
+  background: hsl(var(--lucent-surface) / 0.6);
+  color: hsl(var(--lucent-on-surface));
+  font-size: 14px;
+}
+
+.lucent-panel-select:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-focus-ring);
+}
+
+.lucent-panel-checkbox {
+  align-self: flex-start;
+  block-size: 18px;
+  inline-size: 18px;
+  accent-color: hsl(var(--lucent-accent));
+  cursor: pointer;
+}
+
+/* ─── Helper / warning text ─────────────────────────────────────────────── */
+
+.lucent-panel-helper {
+  font-size: 12px;
+  color: hsl(var(--lucent-on-surface-muted));
+  margin: 0;
+}
+
+.lucent-panel-warning {
+  font-size: 12px;
+  color: hsl(var(--lucent-danger));
+  margin: 0;
+  padding-block: var(--lucent-space-1, 4px);
+  padding-inline: var(--lucent-space-2, 8px);
+  border-inline-start: 2px solid hsl(var(--lucent-danger));
+  background: hsl(var(--lucent-danger) / 0.08);
+  border-radius: 0 var(--lucent-radius-xs) var(--lucent-radius-xs) 0;
+}
+
+/* ─── Reset button ─────────────────────────────────────────────────────── */
+
+.lucent-panel-reset {
+  padding-block: var(--lucent-space-1, 4px);
+  padding-inline: var(--lucent-space-3, 12px);
+  border: 1px solid hsl(var(--lucent-border));
+  border-radius: var(--lucent-radius-md);
+  background: transparent;
+  color: hsl(var(--lucent-on-surface-muted));
+  font-size: 13px;
+  cursor: pointer;
+  transition: background var(--lucent-duration-fast) var(--lucent-ease-standard),
+              color var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-panel-reset:hover {
+  background: hsl(var(--lucent-surface) / 0.4);
+  color: hsl(var(--lucent-on-surface));
+}
+
+.lucent-panel-reset:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-focus-ring);
+}

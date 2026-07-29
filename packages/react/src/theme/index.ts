@@ -15,6 +15,9 @@ export type { LucentProviderProps, LucentContextValue } from './LucentProvider';
 
 export { useLucent } from './useLucent';
 
+export { ThemePanel } from './ThemePanel';
+export type { ThemePanelProps } from './ThemePanel';
+
 export {
   setTheme, setAccent, setDensity, setGlassOpacity, setGlassBlur, setContrast,
   GLASS_OPACITY_DEFAULT, GLASS_OPACITY_MIN, GLASS_OPACITY_MAX, GLASS_BLUR_MAX,
