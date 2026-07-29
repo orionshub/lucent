@@ -55,6 +55,8 @@ const CLIENT_DIRECTIVE = '"use client";\n';
  */
 const CLIENT_ENTRIES = [
   join(DIST, 'theme', 'index.js'),
+  join(DIST, 'utils', 'Portal', 'index.js'),
+  join(DIST, 'primitives', 'Avatar', 'index.js'),
 ];
 
 for (const entry of CLIENT_ENTRIES) {

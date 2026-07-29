@@ -6,6 +6,7 @@ export default defineConfig({
   entry: [
     'src/index.ts',
     'src/primitives/*/index.ts',
+    'src/utils/*/index.ts',
     'src/theme/index.ts',
     'src/tokens/index.ts',
   ],

@@ -51,4 +51,31 @@ describe('SSR import-safety (FND-05, D-14)', () => {
     expect(noFlashScript).not.toBe('');
   });
 
+  // ─── Phase 2 — all new entries import cleanly in node env ──────────────────
+
+  describe('Phase 2 utilities + primitives import without browser globals', () => {
+    const entries = [
+      '../src/utils/Slot/index',
+      '../src/utils/VisuallyHidden/index',
+      '../src/utils/AccessibleIcon/index',
+      '../src/utils/Portal/index',
+      '../src/primitives/Button/index',
+      '../src/primitives/IconButton/index',
+      '../src/primitives/Text/index',
+      '../src/primitives/Heading/index',
+      '../src/primitives/Link/index',
+      '../src/primitives/Separator/index',
+      '../src/primitives/AspectRatio/index',
+      '../src/primitives/Avatar/index',
+      '../src/primitives/Badge/index',
+      '../src/primitives/Kbd/index',
+    ];
+    for (const entry of entries) {
+      it(`${entry} imports without throwing`, async () => {
+        const mod = await import(entry);
+        expect(typeof mod).toBe('object');
+      });
+    }
+  });
+
 });

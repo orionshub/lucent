@@ -42,6 +42,42 @@ describe('Build-output client directive (FND-01, D-03)', () => {
     expect(firstLine).not.toMatch(/^["']use client["']/);
   });
 
+  // ─── Phase 2 client/server split ──────────────────────────────────────────
+
+  function firstLine(rel: string): string {
+    return readFileSync(resolve(dist, rel), 'utf8').split('\n')[0].trim();
+  }
+
+  describe('Phase 2 — client entries carry "use client"', () => {
+    for (const rel of ['utils/Portal/index.js', 'primitives/Avatar/index.js']) {
+      it(`dist/${rel} starts with "use client"`, () => {
+        expect(firstLine(rel)).toMatch(/^["']use client["']/);
+      });
+    }
+  });
+
+  describe('Phase 2 — server-safe entries do NOT carry "use client"', () => {
+    const serverSafe = [
+      'primitives/Button/index.js',
+      'primitives/IconButton/index.js',
+      'primitives/Link/index.js',
+      'primitives/Text/index.js',
+      'primitives/Heading/index.js',
+      'primitives/Badge/index.js',
+      'primitives/Kbd/index.js',
+      'primitives/Separator/index.js',
+      'primitives/AspectRatio/index.js',
+      'utils/Slot/index.js',
+      'utils/VisuallyHidden/index.js',
+      'utils/AccessibleIcon/index.js',
+    ];
+    for (const rel of serverSafe) {
+      it(`dist/${rel} does NOT start with "use client"`, () => {
+        expect(firstLine(rel)).not.toMatch(/^["']use client["']/);
+      });
+    }
+  });
+
   describe('All exported CSS/preset targets exist after build', () => {
     const cssPaths = [
       'styles/index.css',

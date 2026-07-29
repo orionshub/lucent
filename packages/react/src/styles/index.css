@@ -23,3 +23,15 @@
 @import './tokens.density-compact.css';
 @import './glass.css';
 @import './motion.css';
+
+/* Phase 2 — component styles */
+@import '../primitives/Text/text.css';
+@import '../primitives/Heading/heading.css';
+@import '../primitives/Badge/badge.css';
+@import '../primitives/Kbd/kbd.css';
+@import '../primitives/Separator/separator.css';
+@import '../primitives/AspectRatio/aspect-ratio.css';
+@import '../primitives/Avatar/avatar.css';
+@import '../primitives/Button/button.css';
+@import '../primitives/IconButton/icon-button.css';
+@import '../primitives/Link/link.css';

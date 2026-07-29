@@ -152,7 +152,7 @@ describe('Token emission (FND-02, FND-09)', () => {
       // to any semantic role token (e.g. --lucent-type-*-size pointing to them).
       // They can exist as raw primitives but nothing should reference them as a component role.
       const semanticSizeVars = tokensCss.match(/--lucent-type-(display|heading|body|label)-size/g) || [];
-      const roleValues = semanticSizeVars.map((v) => {
+      const roleValues = semanticSizeVars.map((v: string) => {
         const re = new RegExp(v.replace('--', '--') + ':\\s*([^;\\n]+)');
         const m = re.exec(tokensCss);
         return m ? m[1].trim() : '';

@@ -38,6 +38,62 @@
       "types": "./dist/primitives/GlassSurface/index.d.ts",
       "import": "./dist/primitives/GlassSurface/index.js"
     },
+    "./button": {
+      "types": "./dist/primitives/Button/index.d.ts",
+      "import": "./dist/primitives/Button/index.js"
+    },
+    "./icon-button": {
+      "types": "./dist/primitives/IconButton/index.d.ts",
+      "import": "./dist/primitives/IconButton/index.js"
+    },
+    "./text": {
+      "types": "./dist/primitives/Text/index.d.ts",
+      "import": "./dist/primitives/Text/index.js"
+    },
+    "./heading": {
+      "types": "./dist/primitives/Heading/index.d.ts",
+      "import": "./dist/primitives/Heading/index.js"
+    },
+    "./link": {
+      "types": "./dist/primitives/Link/index.d.ts",
+      "import": "./dist/primitives/Link/index.js"
+    },
+    "./separator": {
+      "types": "./dist/primitives/Separator/index.d.ts",
+      "import": "./dist/primitives/Separator/index.js"
+    },
+    "./avatar": {
+      "types": "./dist/primitives/Avatar/index.d.ts",
+      "import": "./dist/primitives/Avatar/index.js"
+    },
+    "./aspect-ratio": {
+      "types": "./dist/primitives/AspectRatio/index.d.ts",
+      "import": "./dist/primitives/AspectRatio/index.js"
+    },
+    "./badge": {
+      "types": "./dist/primitives/Badge/index.d.ts",
+      "import": "./dist/primitives/Badge/index.js"
+    },
+    "./kbd": {
+      "types": "./dist/primitives/Kbd/index.d.ts",
+      "import": "./dist/primitives/Kbd/index.js"
+    },
+    "./slot": {
+      "types": "./dist/utils/Slot/index.d.ts",
+      "import": "./dist/utils/Slot/index.js"
+    },
+    "./visually-hidden": {
+      "types": "./dist/utils/VisuallyHidden/index.d.ts",
+      "import": "./dist/utils/VisuallyHidden/index.js"
+    },
+    "./accessible-icon": {
+      "types": "./dist/utils/AccessibleIcon/index.d.ts",
+      "import": "./dist/utils/AccessibleIcon/index.js"
+    },
+    "./portal": {
+      "types": "./dist/utils/Portal/index.d.ts",
+      "import": "./dist/utils/Portal/index.js"
+    },
     "./theme": {
       "types": "./dist/theme/index.d.ts",
       "import": "./dist/theme/index.js"
@@ -68,6 +124,7 @@
     "@size-limit/preset-small-lib": "^13.0.1",
     "@testing-library/jest-dom": "^7.0.0",
     "@testing-library/react": "^16.3.2",
+    "@types/node": "^26.1.2",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^6.0.4",

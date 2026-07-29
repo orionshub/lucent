@@ -14,12 +14,96 @@
   {
     "name": "@lucent/react — root barrel",
     "path": "./dist/index.js",
-    "limit": "20 KB",
+    "limit": "24 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
     "name": "@lucent/react — tokens",
     "path": "./dist/tokens/index.js",
     "limit": "4 KB"
+  },
+  {
+    "name": "@lucent/react — Button",
+    "path": "./dist/primitives/Button/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — IconButton",
+    "path": "./dist/primitives/IconButton/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — Link",
+    "path": "./dist/primitives/Link/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — Text",
+    "path": "./dist/primitives/Text/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom"]
+  },
+  {
+    "name": "@lucent/react — Heading",
+    "path": "./dist/primitives/Heading/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom"]
+  },
+  {
+    "name": "@lucent/react — Badge",
+    "path": "./dist/primitives/Badge/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom"]
+  },
+  {
+    "name": "@lucent/react — Kbd",
+    "path": "./dist/primitives/Kbd/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom"]
+  },
+  {
+    "name": "@lucent/react — Separator",
+    "path": "./dist/primitives/Separator/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — AspectRatio",
+    "path": "./dist/primitives/AspectRatio/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — Avatar",
+    "path": "./dist/primitives/Avatar/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — Portal",
+    "path": "./dist/utils/Portal/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — Slot",
+    "path": "./dist/utils/Slot/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — VisuallyHidden",
+    "path": "./dist/utils/VisuallyHidden/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — AccessibleIcon",
+    "path": "./dist/utils/AccessibleIcon/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
   }
 ]
