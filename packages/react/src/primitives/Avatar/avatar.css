@@ -1,0 +1,35 @@
+/* Avatar primitive — flat surface pill (NO per-item backdrop-filter per UI-SPEC perf). */
+
+.lucent-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  overflow: hidden;
+  user-select: none;
+  inline-size: 40px;
+  block-size: 40px;
+  border-radius: var(--lucent-radius-pill);
+  background: hsl(var(--lucent-surface));
+  border: 1px solid hsl(var(--lucent-border));
+}
+
+.lucent-avatar__img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.lucent-avatar__fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 100%;
+  block-size: 100%;
+  color: hsl(var(--lucent-on-surface));
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-label-size);
+  font-weight: var(--lucent-type-label-weight);
+  text-transform: uppercase;
+}

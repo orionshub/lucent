@@ -1,0 +1,6 @@
+/* AspectRatio primitive — Radix handles the ratio box; token-only clipping. */
+
+.lucent-aspect-ratio {
+  overflow: hidden;
+  border-radius: var(--lucent-radius-lg);
+}
