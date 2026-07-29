@@ -59,7 +59,7 @@
     "lint:css": "stylelint \"src/**/*.css\"",
     "test": "vitest run",
     "qa:publint": "publint",
-    "qa:attw": "attw --pack",
+    "qa:attw": "attw --pack --profile esm-only --exclude-entrypoints \"./styles.css\" \"./glass.css\" \"./fonts.css\" \"./theme.css\" \"./tailwind\"",
     "qa:size": "size-limit",
     "ci": "pnpm run build && pnpm run lint:css && pnpm run test && pnpm run qa:publint && pnpm run qa:attw && pnpm run qa:size"
   },

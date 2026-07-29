@@ -1,0 +1,25 @@
+[
+  {
+    "name": "@lucent/react — GlassSurface",
+    "path": "./dist/primitives/GlassSurface/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom"]
+  },
+  {
+    "name": "@lucent/react — theme (LucentProvider + useLucent + ThemePanel)",
+    "path": "./dist/theme/index.js",
+    "limit": "8 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — root barrel",
+    "path": "./dist/index.js",
+    "limit": "20 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — tokens",
+    "path": "./dist/tokens/index.js",
+    "limit": "4 KB"
+  }
+]

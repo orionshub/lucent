@@ -1,0 +1,25 @@
+/**
+ * src/styles/index.css — Aggregated stylesheet
+ *
+ * Consumers import this for the complete Lucent style baseline:
+ *   import '@lucent/react/styles.css';
+ *
+ * Imports in dependency order:
+ *   1. tokens.css — all --lucent-* CSS custom properties (dark defaults)
+ *   2. glass.css  — .lucent-glass recipe + solid/forced-colors handling
+ *   3. motion.css — duration/easing tokens + reduced-motion policy
+ *
+ * Theme / accent / density variants are imported separately IF needed:
+ *   import '@lucent/react/styles.css';               -- dark defaults
+ *   (LucentProvider applies data-theme/data-accent/data-density on <html>
+ *    at runtime, triggering the override blocks in tokens.css variants)
+ */
+
+@import './tokens.css';
+@import './tokens.light.css';
+@import './tokens.accent-violet.css';
+@import './tokens.accent-teal.css';
+@import './tokens.density-balanced.css';
+@import './tokens.density-compact.css';
+@import './glass.css';
+@import './motion.css';

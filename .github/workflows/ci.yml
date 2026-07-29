@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, 'gsd/**']
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build-test:
+    name: Build, test, QA
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ≥22 (required by Style Dictionary 5)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build (tokens → tsup)
+        working-directory: packages/react
+        run: pnpm build
+
+      - name: Lint CSS (stylelint RTL guard)
+        working-directory: packages/react
+        run: pnpm lint:css
+
+      - name: Test (Vitest — dom + node lanes)
+        working-directory: packages/react
+        run: pnpm test
+
+      - name: Packaging QA — publint
+        working-directory: packages/react
+        run: pnpm qa:publint
+
+      - name: Packaging QA — attw (are the types wrong?)
+        working-directory: packages/react
+        run: pnpm qa:attw
+
+      - name: Bundle size check
+        working-directory: packages/react
+        run: pnpm qa:size
+
+      - name: Use-client directive build-output test
+        working-directory: packages/react
+        run: pnpm exec vitest run test/use-client.test.ts --reporter=verbose
+
+      - name: Tree-shake smoke fixture
+        working-directory: packages/react
+        run: node test/tree-shake.fixture.mjs
