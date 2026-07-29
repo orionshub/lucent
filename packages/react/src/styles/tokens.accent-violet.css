@@ -1,7 +1,7 @@
-﻿/* Violet accent preset — via data-accent="violet" on <html>.
+/* Violet accent preset — runtime-selectable via data-accent="violet" on <html>.
  * Values from UI-SPEC.md §Accent presets (D-15).
  */
 [data-accent="violet"] {
-  --lucent-accent: var(--lucent-color-violet-500);
-  --lucent-on-accent: 265 40% 10%;
+  --lucent-accent: 265 90% 66%; /* hsl channel triplet: violet-500 */
+  --lucent-on-accent: 265 40% 10%; /* dark ink on violet */
 }
