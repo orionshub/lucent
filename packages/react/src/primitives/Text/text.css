@@ -1,0 +1,25 @@
+/* Text primitive — consumes body/label type-role tokens only. Logical properties. */
+
+.lucent-text {
+  margin-block: 0;
+  font-family: var(--lucent-font-sans);
+  color: hsl(var(--lucent-on-surface));
+}
+
+.lucent-text--body {
+  font-size: var(--lucent-type-body-size);
+  font-weight: var(--lucent-type-body-weight);
+  line-height: var(--lucent-type-body-leading);
+  letter-spacing: var(--lucent-type-body-tracking);
+}
+
+.lucent-text--label {
+  font-size: var(--lucent-type-label-size);
+  font-weight: var(--lucent-type-label-weight);
+  line-height: var(--lucent-type-label-leading);
+  letter-spacing: var(--lucent-type-label-tracking);
+}
+
+.lucent-text--muted {
+  color: hsl(var(--lucent-on-surface-muted));
+}

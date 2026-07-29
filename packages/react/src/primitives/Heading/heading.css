@@ -1,0 +1,21 @@
+/* Heading primitive — consumes display/heading type-role tokens only. Logical properties. */
+
+.lucent-heading {
+  margin-block: 0;
+  font-family: var(--lucent-font-sans);
+  color: hsl(var(--lucent-on-surface));
+}
+
+.lucent-heading--display {
+  font-size: var(--lucent-type-display-size);
+  font-weight: var(--lucent-type-display-weight);
+  line-height: var(--lucent-type-display-leading);
+  letter-spacing: var(--lucent-type-display-tracking);
+}
+
+.lucent-heading--heading {
+  font-size: var(--lucent-type-heading-size);
+  font-weight: var(--lucent-type-heading-weight);
+  line-height: var(--lucent-type-heading-leading);
+  letter-spacing: var(--lucent-type-heading-tracking);
+}

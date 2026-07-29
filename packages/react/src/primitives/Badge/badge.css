@@ -1,0 +1,58 @@
+/* Badge primitive — token-only, logical properties. */
+
+.lucent-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--lucent-space-1);
+  padding-block: var(--lucent-space-1);
+  padding-inline: var(--lucent-space-2);
+  border-radius: var(--lucent-radius-xs);
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-label-size);
+  font-weight: var(--lucent-type-label-weight);
+  line-height: 1;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+/* ─── Neutral ─────────────────────────────────────────── */
+.lucent-badge--neutral.lucent-badge--soft {
+  background: hsl(var(--lucent-surface));
+  color: hsl(var(--lucent-on-surface));
+}
+.lucent-badge--neutral.lucent-badge--solid {
+  background: hsl(var(--lucent-on-surface-muted));
+  color: hsl(var(--lucent-bg));
+}
+.lucent-badge--neutral.lucent-badge--outline {
+  color: hsl(var(--lucent-on-surface));
+  border-color: hsl(var(--lucent-border));
+}
+
+/* ─── Accent ──────────────────────────────────────────── */
+.lucent-badge--accent.lucent-badge--soft {
+  background: hsl(var(--lucent-accent) / 0.15);
+  color: hsl(var(--lucent-accent));
+}
+.lucent-badge--accent.lucent-badge--solid {
+  background: hsl(var(--lucent-accent));
+  color: hsl(var(--lucent-on-accent));
+}
+.lucent-badge--accent.lucent-badge--outline {
+  color: hsl(var(--lucent-accent));
+  border-color: hsl(var(--lucent-accent) / 0.5);
+}
+
+/* ─── Danger ──────────────────────────────────────────── */
+.lucent-badge--danger.lucent-badge--soft {
+  background: hsl(var(--lucent-danger) / 0.15);
+  color: hsl(var(--lucent-danger));
+}
+.lucent-badge--danger.lucent-badge--solid {
+  background: hsl(var(--lucent-danger));
+  color: hsl(var(--lucent-on-danger));
+}
+.lucent-badge--danger.lucent-badge--outline {
+  color: hsl(var(--lucent-danger));
+  border-color: hsl(var(--lucent-danger) / 0.5);
+}

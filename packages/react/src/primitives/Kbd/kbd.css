@@ -1,0 +1,18 @@
+/* Kbd primitive — mono font keycap, token-only, logical properties. */
+
+.lucent-kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 1.5em;
+  padding-block: var(--lucent-space-1);
+  padding-inline: var(--lucent-space-1);
+  border-radius: var(--lucent-radius-xs);
+  border: 1px solid hsl(var(--lucent-border));
+  border-block-end-width: 2px;
+  background: hsl(var(--lucent-surface));
+  color: hsl(var(--lucent-on-surface));
+  font-family: var(--lucent-font-mono);
+  font-size: var(--lucent-type-label-size);
+  line-height: 1;
+}
