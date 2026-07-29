@@ -1,0 +1,20 @@
+/* Link primitive — accent text link, token-only, logical properties. */
+
+.lucent-link {
+  color: hsl(var(--lucent-accent));
+  text-decoration-line: underline;
+  text-decoration-color: hsl(var(--lucent-accent) / 0.4);
+  text-underline-offset: 2px;
+  border-radius: var(--lucent-radius-xs);
+  transition: text-decoration-color var(--lucent-duration-fast) var(--lucent-ease-standard);
+  cursor: pointer;
+}
+
+.lucent-link:hover {
+  text-decoration-color: hsl(var(--lucent-accent));
+}
+
+.lucent-link:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-focus-ring);
+}

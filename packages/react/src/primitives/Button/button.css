@@ -1,0 +1,110 @@
+/* Button primitive — density-linked sizes, token-only, logical properties. */
+
+.lucent-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--lucent-space-2);
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: var(--lucent-radius-md);
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-label-size);
+  font-weight: var(--lucent-type-label-weight);
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition:
+    background var(--lucent-duration-fast) var(--lucent-ease-standard),
+    border-color var(--lucent-duration-fast) var(--lucent-ease-standard),
+    color var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-focus-ring);
+}
+
+.lucent-btn:disabled,
+.lucent-btn[data-loading] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ─── Sizes (md maps to the density control-height token; sm/lg proportional) ─── */
+.lucent-btn--md {
+  block-size: var(--lucent-control-h);
+  padding-inline: var(--lucent-space-4);
+}
+.lucent-btn--sm {
+  block-size: calc(var(--lucent-control-h) - 8px);
+  padding-inline: var(--lucent-space-2);
+  font-size: calc(var(--lucent-type-label-size) - 1px);
+}
+.lucent-btn--lg {
+  block-size: calc(var(--lucent-control-h) + 8px);
+  padding-inline: var(--lucent-space-6);
+}
+
+/* ─── Variants ─────────────────────────────────────────── */
+.lucent-btn--solid {
+  background: hsl(var(--lucent-accent));
+  color: hsl(var(--lucent-on-accent));
+  box-shadow: var(--lucent-edge);
+}
+.lucent-btn--solid:hover:not(:disabled) {
+  background: hsl(var(--lucent-accent) / 0.9);
+}
+
+.lucent-btn--soft {
+  background: hsl(var(--lucent-accent) / 0.15);
+  color: hsl(var(--lucent-accent));
+}
+.lucent-btn--soft:hover:not(:disabled) {
+  background: hsl(var(--lucent-accent) / 0.22);
+}
+
+.lucent-btn--outline {
+  background: transparent;
+  color: hsl(var(--lucent-on-surface));
+  border-color: hsl(var(--lucent-border));
+}
+.lucent-btn--outline:hover:not(:disabled) {
+  background: hsl(var(--lucent-surface) / 0.5);
+}
+
+.lucent-btn--ghost {
+  background: transparent;
+  color: hsl(var(--lucent-on-surface));
+}
+.lucent-btn--ghost:hover:not(:disabled) {
+  background: hsl(var(--lucent-surface) / 0.5);
+}
+
+/* ─── Icon slots ───────────────────────────────────────── */
+.lucent-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Spinner (CSS-only, honors reduced-motion) ───────── */
+.lucent-btn__spinner {
+  inline-size: 1em;
+  block-size: 1em;
+  border: 2px solid currentColor;
+  border-block-start-color: transparent;
+  border-radius: var(--lucent-radius-pill);
+  animation: lucent-btn-spin var(--lucent-duration-slow) linear infinite;
+}
+
+@keyframes lucent-btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-btn__spinner {
+    animation-duration: 1.2s;
+  }
+}

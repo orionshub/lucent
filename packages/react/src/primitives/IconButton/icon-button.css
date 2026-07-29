@@ -1,0 +1,64 @@
+/* IconButton primitive — square control, density-linked, token-only, logical properties. */
+
+.lucent-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--lucent-radius-md);
+  cursor: pointer;
+  user-select: none;
+  color: hsl(var(--lucent-on-surface));
+  transition:
+    background var(--lucent-duration-fast) var(--lucent-ease-standard),
+    border-color var(--lucent-duration-fast) var(--lucent-ease-standard),
+    color var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-icon-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-focus-ring);
+}
+
+.lucent-icon-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ─── Sizes (square, from control-height) ──────────────── */
+.lucent-icon-btn--md {
+  inline-size: var(--lucent-control-h);
+  block-size: var(--lucent-control-h);
+}
+.lucent-icon-btn--sm {
+  inline-size: calc(var(--lucent-control-h) - 8px);
+  block-size: calc(var(--lucent-control-h) - 8px);
+}
+.lucent-icon-btn--lg {
+  inline-size: calc(var(--lucent-control-h) + 8px);
+  block-size: calc(var(--lucent-control-h) + 8px);
+}
+
+/* ─── Variants (share Button token language) ───────────── */
+.lucent-icon-btn--solid {
+  background: hsl(var(--lucent-accent));
+  color: hsl(var(--lucent-on-accent));
+  box-shadow: var(--lucent-edge);
+}
+.lucent-icon-btn--soft {
+  background: hsl(var(--lucent-accent) / 0.15);
+  color: hsl(var(--lucent-accent));
+}
+.lucent-icon-btn--outline {
+  border-color: hsl(var(--lucent-border));
+}
+.lucent-icon-btn--outline:hover:not(:disabled),
+.lucent-icon-btn--ghost:hover:not(:disabled) {
+  background: hsl(var(--lucent-surface) / 0.5);
+}
+
+.lucent-icon-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
