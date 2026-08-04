@@ -44,6 +44,36 @@ function copyCss(dir) {
 copyCss(SRC_STYLES);
 console.log('post-build: copied src/**/*.css → dist/');
 
+// ─── 1b. Flatten dist/styles/index.css @imports ──────────────────────────────
+// Vite can silently fail to resolve @import paths that traverse up with "../"
+// from within a package (e.g. "../primitives/Kbd/kbd.css" from dist/styles/).
+// Fix: replace every @import in dist/styles/index.css with the actual file content
+// so the consumer gets one fully-inlined CSS file with no path resolution required.
+
+const DIST_INDEX_CSS = join(DIST, 'styles', 'index.css');
+if (existsSync(DIST_INDEX_CSS)) {
+  const raw = readFileSync(DIST_INDEX_CSS, 'utf8');
+  const lines = raw.split('\n');
+  const output = [];
+  for (const line of lines) {
+    const importMatch = line.match(/^@import\s+['"]([^'"]+)['"]\s*;/);
+    if (importMatch) {
+      const importPath = join(DIST, 'styles', importMatch[1]);
+      if (existsSync(importPath)) {
+        output.push(`/* inlined from ${importMatch[1]} */`);
+        output.push(readFileSync(importPath, 'utf8'));
+      } else {
+        // Keep the @import as-is if the file doesn't exist (safe fallback)
+        output.push(line);
+      }
+    } else {
+      output.push(line);
+    }
+  }
+  writeFileSync(DIST_INDEX_CSS, output.join('\n'), 'utf8');
+  console.log('post-build: flattened dist/styles/index.css @imports inline');
+}
+
 // ─── 2. Prepend "use client" to interactive theme entries ────────────────────
 
 const CLIENT_DIRECTIVE = '"use client";\n';
