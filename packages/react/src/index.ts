@@ -95,6 +95,40 @@ export type {
   SelectItemProps, SelectGroupProps, SelectLabelProps, SelectSeparatorProps,
 } from './primitives/Select/Select';
 
+// ─── Phase 4 — Layout & Static Data Display ───────────────────────────────
+export { Box } from './primitives/Box/Box';
+export type { BoxProps } from './primitives/Box/Box';
+export { Flex } from './primitives/Flex/Flex';
+export type { FlexProps } from './primitives/Flex/Flex';
+export { Grid } from './primitives/Grid/Grid';
+export type { GridProps } from './primitives/Grid/Grid';
+export { Card } from './primitives/Card/Card';
+export type { CardProps, CardVariant, CardPadding, CardSectionProps } from './primitives/Card/Card';
+export { ScrollArea } from './primitives/ScrollArea/ScrollArea';
+export type { ScrollAreaProps, ScrollAreaOrientation } from './primitives/ScrollArea/ScrollArea';
+export { Accordion } from './primitives/Accordion/Accordion';
+export type {
+  AccordionRootProps, AccordionItemProps, AccordionTriggerProps, AccordionContentProps,
+} from './primitives/Accordion/Accordion';
+export { Collapsible } from './primitives/Collapsible/Collapsible';
+export type {
+  CollapsibleRootProps, CollapsibleTriggerProps, CollapsibleContentProps,
+} from './primitives/Collapsible/Collapsible';
+export { Tabs } from './primitives/Tabs/Tabs';
+export type {
+  TabsRootProps, TabsListProps, TabsTriggerProps, TabsContentProps,
+} from './primitives/Tabs/Tabs';
+export { Table } from './primitives/Table/Table';
+export type {
+  TableProps, TableCaptionProps, TableSectionProps, TableRowProps, TableHeadProps, TableCellProps,
+} from './primitives/Table/Table';
+export { Callout } from './primitives/Callout/Callout';
+export type { CalloutProps, CalloutTone } from './primitives/Callout/Callout';
+export { Progress } from './primitives/Progress/Progress';
+export type { ProgressProps, ProgressVariant } from './primitives/Progress/Progress';
+export { AvatarGroup } from './primitives/AvatarGroup/AvatarGroup';
+export type { AvatarGroupProps } from './primitives/AvatarGroup/AvatarGroup';
+
 // ─── Design tokens (typed TS map) ─────────────────────────────────────────
 // Re-exported via the ./tokens subpath; also available here for convenience.
 // import type { LucentBg } from '@lucent/react' (from the generated TS map)

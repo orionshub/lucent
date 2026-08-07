@@ -1,0 +1,55 @@
+.lucent-scroll-area {
+  position: relative;
+  overflow: hidden;
+}
+
+.lucent-scroll-area__viewport {
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: inherit;
+}
+
+.lucent-scroll-area__scrollbar {
+  display: flex;
+  user-select: none;
+  touch-action: none;
+  padding: 2px;
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  transition: background var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-scroll-area__scrollbar--vertical {
+  inline-size: 10px;
+}
+
+.lucent-scroll-area__scrollbar--horizontal {
+  flex-direction: column;
+  block-size: 10px;
+}
+
+.lucent-scroll-area__thumb {
+  flex: 1;
+  position: relative;
+  border-radius: var(--lucent-radius-pill);
+  background: hsl(var(--lucent-border) / 0.9);
+}
+
+.lucent-scroll-area__thumb::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  min-inline-size: 44px;
+  min-block-size: 44px;
+}
+
+.lucent-scroll-area__corner {
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-scroll-area__scrollbar {
+    transition: none;
+  }
+}

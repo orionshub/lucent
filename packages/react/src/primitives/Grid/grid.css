@@ -1,0 +1,11 @@
+.lucent-grid {
+  display: grid;
+  grid-template-columns: var(--lucent-grid-cols);
+  grid-template-rows: var(--lucent-grid-rows);
+  gap: var(--lucent-grid-row-gap, var(--lucent-grid-gap, 0)) var(--lucent-grid-col-gap, var(--lucent-grid-gap, 0));
+  grid-auto-flow: var(--lucent-grid-flow, row);
+  place-items: var(--lucent-grid-align, stretch) var(--lucent-grid-justify, stretch);
+  padding: var(--lucent-box-p);
+  padding-inline: var(--lucent-box-px);
+  padding-block: var(--lucent-box-py);
+}

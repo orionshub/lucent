@@ -48,3 +48,17 @@
 @import '../primitives/RadioGroup/radio-group.css';
 @import '../primitives/Slider/slider.css';
 @import '../primitives/Select/select.css';
+
+/* Phase 4 — layout & static data display */
+@import '../primitives/Box/box.css';
+@import '../primitives/Flex/flex.css';
+@import '../primitives/Grid/grid.css';
+@import '../primitives/Card/card.css';
+@import '../primitives/ScrollArea/scroll-area.css';
+@import '../primitives/Accordion/accordion.css';
+@import '../primitives/Collapsible/collapsible.css';
+@import '../primitives/Tabs/tabs.css';
+@import '../primitives/Table/table.css';
+@import '../primitives/Callout/callout.css';
+@import '../primitives/Progress/progress.css';
+@import '../primitives/AvatarGroup/avatar-group.css';

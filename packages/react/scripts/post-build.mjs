@@ -95,6 +95,13 @@ const CLIENT_ENTRIES = [
   join(DIST, 'primitives', 'ToggleGroup', 'index.js'),
   join(DIST, 'primitives', 'Select', 'index.js'),
   join(DIST, 'primitives', 'Slider', 'index.js'),
+  // Phase 4 — Radix-backed / client-composing components
+  join(DIST, 'primitives', 'ScrollArea', 'index.js'),
+  join(DIST, 'primitives', 'Accordion', 'index.js'),
+  join(DIST, 'primitives', 'Collapsible', 'index.js'),
+  join(DIST, 'primitives', 'Tabs', 'index.js'),
+  join(DIST, 'primitives', 'Progress', 'index.js'),
+  join(DIST, 'primitives', 'AvatarGroup', 'index.js'),
 ];
 
 for (const entry of CLIENT_ENTRIES) {

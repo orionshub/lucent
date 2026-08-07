@@ -33,7 +33,8 @@
   inset-inline-start: var(--lucent-space-3);
   inset-block-start: 50%;
   transform: translateY(-50%);
-  transform-origin: inline-start center;
+  /* transform-origin has no logical keyword; 0 = inline-start edge (LTR). */
+  transform-origin: 0 center;
   pointer-events: none;
   color: hsl(var(--lucent-on-surface-muted));
   font-size: var(--lucent-type-body-size);

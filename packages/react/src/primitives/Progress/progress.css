@@ -1,0 +1,65 @@
+/* Base element rules first (lowest specificity) to satisfy descending-specificity. */
+.lucent-progress__track {
+  stroke: hsl(var(--lucent-border) / var(--lucent-glass-opacity));
+}
+
+.lucent-progress__indicator {
+  stroke: hsl(var(--lucent-accent));
+  transition: stroke-dashoffset var(--lucent-duration-base) var(--lucent-ease-standard);
+  transform-origin: center;
+}
+
+.lucent-progress__indicator[data-indeterminate] {
+  inline-size: 40%;
+  animation: lucent-progress-slide 1.2s infinite var(--lucent-ease-standard);
+}
+
+.lucent-progress--linear {
+  position: relative;
+  overflow: hidden;
+  inline-size: 100%;
+  block-size: 8px;
+  border-radius: var(--lucent-radius-pill);
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  border: 1px solid hsl(var(--lucent-border) / var(--lucent-glass-opacity));
+}
+
+.lucent-progress--linear .lucent-progress__indicator {
+  block-size: 100%;
+  inline-size: 100%;
+  background: hsl(var(--lucent-accent));
+  transition: transform var(--lucent-duration-base) var(--lucent-ease-standard);
+}
+
+.lucent-progress--circular {
+  display: inline-flex;
+}
+
+.lucent-progress--circular[data-state='indeterminate'] .lucent-progress__svg {
+  animation: lucent-progress-spin 1s linear infinite;
+}
+
+@keyframes lucent-progress-slide {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(350%);
+  }
+}
+
+@keyframes lucent-progress-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-progress__indicator,
+  .lucent-progress__indicator[data-indeterminate],
+  .lucent-progress--circular[data-state='indeterminate'] .lucent-progress__svg {
+    animation: none;
+    transition: none;
+  }
+}

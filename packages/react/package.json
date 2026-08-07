@@ -122,6 +122,54 @@
       "types": "./dist/primitives/Kbd/index.d.ts",
       "import": "./dist/primitives/Kbd/index.js"
     },
+    "./box": {
+      "types": "./dist/primitives/Box/index.d.ts",
+      "import": "./dist/primitives/Box/index.js"
+    },
+    "./flex": {
+      "types": "./dist/primitives/Flex/index.d.ts",
+      "import": "./dist/primitives/Flex/index.js"
+    },
+    "./grid": {
+      "types": "./dist/primitives/Grid/index.d.ts",
+      "import": "./dist/primitives/Grid/index.js"
+    },
+    "./card": {
+      "types": "./dist/primitives/Card/index.d.ts",
+      "import": "./dist/primitives/Card/index.js"
+    },
+    "./scroll-area": {
+      "types": "./dist/primitives/ScrollArea/index.d.ts",
+      "import": "./dist/primitives/ScrollArea/index.js"
+    },
+    "./accordion": {
+      "types": "./dist/primitives/Accordion/index.d.ts",
+      "import": "./dist/primitives/Accordion/index.js"
+    },
+    "./collapsible": {
+      "types": "./dist/primitives/Collapsible/index.d.ts",
+      "import": "./dist/primitives/Collapsible/index.js"
+    },
+    "./tabs": {
+      "types": "./dist/primitives/Tabs/index.d.ts",
+      "import": "./dist/primitives/Tabs/index.js"
+    },
+    "./table": {
+      "types": "./dist/primitives/Table/index.d.ts",
+      "import": "./dist/primitives/Table/index.js"
+    },
+    "./callout": {
+      "types": "./dist/primitives/Callout/index.d.ts",
+      "import": "./dist/primitives/Callout/index.js"
+    },
+    "./progress": {
+      "types": "./dist/primitives/Progress/index.d.ts",
+      "import": "./dist/primitives/Progress/index.js"
+    },
+    "./avatar-group": {
+      "types": "./dist/primitives/AvatarGroup/index.d.ts",
+      "import": "./dist/primitives/AvatarGroup/index.js"
+    },
     "./slot": {
       "types": "./dist/utils/Slot/index.d.ts",
       "import": "./dist/utils/Slot/index.js"

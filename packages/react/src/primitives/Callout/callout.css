@@ -1,0 +1,39 @@
+.lucent-callout {
+  display: flex;
+  gap: var(--lucent-space-3);
+  padding-block: var(--lucent-space-3);
+  padding-inline: var(--lucent-space-4);
+  border-radius: var(--lucent-radius-md);
+  border: 1px solid hsl(var(--lucent-callout-tint) / 0.4);
+  background: hsl(var(--lucent-callout-tint) / 0.12);
+  color: hsl(var(--lucent-on-surface));
+}
+
+.lucent-callout__icon {
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  color: hsl(var(--lucent-callout-tint));
+}
+
+.lucent-callout__content {
+  flex: 1;
+  min-inline-size: 0;
+}
+
+.lucent-callout--info {
+  --lucent-callout-tint: var(--lucent-accent);
+}
+
+.lucent-callout--success {
+  --lucent-callout-tint: var(--lucent-color-teal-500);
+}
+
+.lucent-callout--warning {
+  /* No dedicated warning token in the palette — amber literal (unitless HSL). */
+  --lucent-callout-tint: 38 92% 55%;
+}
+
+.lucent-callout--danger {
+  --lucent-callout-tint: var(--lucent-danger);
+}

@@ -1,0 +1,13 @@
+/* Per-side logical padding via a token cascade: side → axis → all.
+   The four logical longhands are required for genuine per-side control, so the
+   redundant-longhand shorthand rule is intentionally disabled for this block. */
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
+.lucent-box {
+  padding-block-start: var(--lucent-box-pt, var(--lucent-box-py, var(--lucent-box-p)));
+  padding-block-end: var(--lucent-box-pb, var(--lucent-box-py, var(--lucent-box-p)));
+  padding-inline-start: var(--lucent-box-pl, var(--lucent-box-px, var(--lucent-box-p)));
+  padding-inline-end: var(--lucent-box-pr, var(--lucent-box-px, var(--lucent-box-p)));
+  margin-block: var(--lucent-box-my, var(--lucent-box-m));
+  margin-inline: var(--lucent-box-mx, var(--lucent-box-m));
+}
+/* stylelint-enable declaration-block-no-redundant-longhand-properties */

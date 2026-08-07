@@ -1,0 +1,29 @@
+.lucent-avatar-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.lucent-avatar-group__item {
+  display: inline-flex;
+  border-radius: var(--lucent-radius-pill);
+  box-shadow: 0 0 0 2px hsl(var(--lucent-bg));
+}
+
+.lucent-avatar-group__item + .lucent-avatar-group__item {
+  margin-inline-start: calc(-1 * var(--lucent-space-2));
+}
+
+.lucent-avatar-group__overflow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: var(--lucent-control-h-compact);
+  min-block-size: var(--lucent-control-h-compact);
+  padding-inline: var(--lucent-space-2);
+  border-radius: var(--lucent-radius-pill);
+  background: hsl(var(--lucent-surface));
+  color: hsl(var(--lucent-on-surface));
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-label-size);
+  font-weight: var(--lucent-type-label-weight);
+}

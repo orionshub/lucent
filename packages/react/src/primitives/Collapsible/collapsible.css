@@ -1,0 +1,59 @@
+.lucent-collapsible__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--lucent-space-2);
+  padding-block: var(--lucent-space-2);
+  padding-inline: var(--lucent-space-3);
+  background: transparent;
+  border: none;
+  color: hsl(var(--lucent-on-surface));
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-body-size);
+  cursor: pointer;
+}
+
+.lucent-collapsible__trigger:focus-visible {
+  outline: none;
+  border-radius: var(--lucent-radius-xs);
+  box-shadow: var(--lucent-focus-ring);
+}
+
+.lucent-collapsible__content {
+  overflow: hidden;
+}
+
+.lucent-collapsible__content-inner {
+  padding-block: var(--lucent-space-2);
+  padding-inline: var(--lucent-space-3);
+  color: hsl(var(--lucent-on-surface));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lucent-collapsible__content[data-state='open'] {
+    animation: lucent-collapsible-down var(--lucent-duration-base) var(--lucent-ease-standard);
+  }
+
+  .lucent-collapsible__content[data-state='closed'] {
+    animation: lucent-collapsible-up var(--lucent-duration-base) var(--lucent-ease-exit);
+  }
+}
+
+@keyframes lucent-collapsible-down {
+  from {
+    block-size: 0;
+  }
+
+  to {
+    block-size: var(--radix-collapsible-content-height);
+  }
+}
+
+@keyframes lucent-collapsible-up {
+  from {
+    block-size: var(--radix-collapsible-content-height);
+  }
+
+  to {
+    block-size: 0;
+  }
+}

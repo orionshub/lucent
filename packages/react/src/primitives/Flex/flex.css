@@ -1,0 +1,14 @@
+.lucent-flex {
+  display: flex;
+  flex-flow: var(--lucent-flex-direction, row) var(--lucent-flex-wrap, nowrap);
+  align-items: var(--lucent-flex-align, stretch);
+  justify-content: var(--lucent-flex-justify, flex-start);
+  gap: var(--lucent-flex-gap, 0);
+  padding: var(--lucent-box-p);
+  padding-inline: var(--lucent-box-px);
+  padding-block: var(--lucent-box-py);
+}
+
+.lucent-flex[data-inline] {
+  display: inline-flex;
+}
