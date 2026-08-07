@@ -1,0 +1,84 @@
+/* FormField — layout, floating label, description, error. Logical properties. */
+
+/* ─── Base (stack layout) ────────────────────────────────────────────────── */
+
+.lucent-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lucent-space-2);
+}
+
+/* ─── Inline layout ──────────────────────────────────────────────────────── */
+
+.lucent-form-field--inline {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--lucent-space-4);
+}
+
+.lucent-form-field--inline .lucent-label {
+  flex-shrink: 0;
+  inline-size: clamp(80px, 30%, 160px);
+}
+
+/* ─── Floating layout ────────────────────────────────────────────────────── */
+
+.lucent-form-field--floating {
+  position: relative;
+}
+
+/* Label default position: inside the control, vertically centered */
+.lucent-form-field--floating .lucent-label {
+  position: absolute;
+  inset-inline-start: var(--lucent-space-3);
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  transform-origin: inline-start center;
+  pointer-events: none;
+  color: hsl(var(--lucent-on-surface-muted));
+  font-size: var(--lucent-type-body-size);
+  z-index: 1;
+  transition:
+    transform var(--lucent-duration-base) var(--lucent-ease-standard),
+    font-size var(--lucent-duration-base) var(--lucent-ease-standard),
+    color var(--lucent-duration-base) var(--lucent-ease-standard);
+}
+
+/*
+ * Raised state: use :has() — the label precedes the control wrapper in DOM order,
+ * so the ~ subsequent-sibling combinator would never fire (plan-checker blocker fix).
+ *
+ * Label rises when:
+ *   1. The field has focus (:focus-within)
+ *   2. The input wrapper has the data-filled attribute (Input sets this on non-empty value)
+ *   3. The native input has a non-empty value (:not(:placeholder-shown))
+ */
+.lucent-form-field--floating:focus-within .lucent-label,
+.lucent-form-field--floating:has(.lucent-input-wrapper[data-filled]) .lucent-label,
+.lucent-form-field--floating:has(.lucent-input:not(:placeholder-shown)) .lucent-label,
+.lucent-form-field--floating:has(.lucent-textarea-wrapper[data-filled]) .lucent-label,
+.lucent-form-field--floating:has(.lucent-textarea:not(:placeholder-shown)) .lucent-label {
+  transform: translateY(calc(-50% - var(--lucent-control-h) / 2 + 4px)) scale(0.8);
+  color: hsl(var(--lucent-accent));
+  font-size: var(--lucent-type-label-size);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-form-field--floating .lucent-label {
+    transition: none;
+  }
+}
+
+/* ─── Description + error ────────────────────────────────────────────────── */
+
+.lucent-form-field__description {
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-label-size);
+  color: hsl(var(--lucent-on-surface-muted));
+}
+
+.lucent-form-field__error {
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-label-size);
+  color: hsl(var(--lucent-danger));
+}
