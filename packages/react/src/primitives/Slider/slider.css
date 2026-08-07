@@ -1,0 +1,65 @@
+/* Slider primitive — glass track + accent range + accent thumb, logical properties. */
+
+.lucent-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  touch-action: none;
+  block-size: var(--lucent-control-h);
+}
+
+/* ─── Track (glass surface) ──────────────────────────────────────────────── */
+
+.lucent-slider__track {
+  position: relative;
+  flex: 1;
+  block-size: 6px;
+  border-radius: var(--lucent-radius-pill);
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  border: 1px solid hsl(var(--lucent-border) / 0.5);
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+          backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+  overflow: hidden;
+}
+
+/* ─── Range fill (accent) ───────────────────────────────────────────────── */
+
+.lucent-slider__range {
+  position: absolute;
+  block-size: 100%;
+  background: hsl(var(--lucent-accent) / 0.85);
+  border-radius: inherit;
+}
+
+/* ─── Thumb ──────────────────────────────────────────────────────────────── */
+
+.lucent-slider__thumb {
+  display: block;
+  block-size: 20px;
+  inline-size: 20px;
+  border-radius: var(--lucent-radius-pill);
+  background: hsl(var(--lucent-accent));
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-md);
+  border: 2px solid hsl(var(--lucent-on-accent) / 0.3);
+  cursor: pointer;
+  transition: transform var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-slider__thumb:hover {
+  transform: scale(1.15);
+}
+
+.lucent-slider__thumb:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-md), var(--lucent-focus-ring);
+}
+
+.lucent-slider[data-disabled] .lucent-slider__thumb {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-slider__thumb { transition: none; }
+}

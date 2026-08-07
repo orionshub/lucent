@@ -1,0 +1,75 @@
+/* RadioGroup primitive — glass pill radio, token-only, logical properties. */
+
+.lucent-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lucent-space-2);
+}
+
+.lucent-radio-group__item-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--lucent-space-2);
+}
+
+/* ─── Radio button ───────────────────────────────────────────────────────── */
+
+.lucent-radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 18px;
+  inline-size: 18px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid hsl(var(--lucent-border));
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+          backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+  cursor: pointer;
+  transition:
+    border-color var(--lucent-duration-fast) var(--lucent-ease-standard),
+    background var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-radio[data-state="checked"] {
+  border-color: hsl(var(--lucent-accent));
+  background: hsl(var(--lucent-accent));
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+
+.lucent-radio:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-focus-ring);
+}
+
+.lucent-radio[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ─── Indicator (inner dot) ──────────────────────────────────────────────── */
+
+.lucent-radio__indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 8px;
+  inline-size: 8px;
+  border-radius: 50%;
+  background: hsl(var(--lucent-on-accent));
+}
+
+/* ─── Label ──────────────────────────────────────────────────────────────── */
+
+.lucent-radio__label {
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-body-size);
+  color: hsl(var(--lucent-on-surface));
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-radio { transition: none; }
+}
