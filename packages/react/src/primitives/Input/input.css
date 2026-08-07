@@ -1,0 +1,85 @@
+/* Input primitive — glass wrapper pattern, token-only, logical properties. */
+
+/* ─── Wrapper (glass surface) ───────────────────────────────────────────── */
+
+.lucent-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  block-size: var(--lucent-control-h);
+  border-radius: var(--lucent-radius-md);
+  border: 1px solid hsl(var(--lucent-border) / var(--lucent-glass-opacity));
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+          backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-sm);
+  transition:
+    border-color var(--lucent-duration-fast) var(--lucent-ease-standard),
+    box-shadow var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-input-wrapper:focus-within {
+  border-color: hsl(var(--lucent-accent) / 0.6);
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-sm), var(--lucent-focus-ring);
+}
+
+.lucent-input-wrapper--invalid {
+  border-color: hsl(var(--lucent-danger) / 0.7);
+}
+
+.lucent-input-wrapper--invalid:focus-within {
+  border-color: hsl(var(--lucent-danger));
+}
+
+/* ─── Inner native input ─────────────────────────────────────────────────── */
+
+.lucent-input {
+  flex: 1;
+  min-inline-size: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  block-size: 100%;
+  padding-inline: var(--lucent-space-3);
+  color: hsl(var(--lucent-on-surface));
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-body-size);
+  line-height: 1;
+}
+
+.lucent-input::placeholder {
+  color: hsl(var(--lucent-on-surface-muted));
+}
+
+/* ─── Icon slots ─────────────────────────────────────────────────────────── */
+
+.lucent-input__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: hsl(var(--lucent-on-surface-muted));
+}
+
+.lucent-input__icon--start {
+  padding-inline-start: var(--lucent-space-3);
+}
+
+.lucent-input__icon--end {
+  padding-inline-end: var(--lucent-space-3);
+}
+
+/* Remove icon padding from the inner input when icons are present */
+.lucent-input-wrapper:has(.lucent-input__icon--start) .lucent-input {
+  padding-inline-start: var(--lucent-space-2);
+}
+.lucent-input-wrapper:has(.lucent-input__icon--end) .lucent-input {
+  padding-inline-end: var(--lucent-space-2);
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-input-wrapper {
+    transition: none;
+  }
+}

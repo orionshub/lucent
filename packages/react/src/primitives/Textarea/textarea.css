@@ -1,0 +1,53 @@
+/* Textarea primitive — glass wrapper pattern, token-only, logical properties. */
+
+.lucent-textarea-wrapper {
+  display: flex;
+  border-radius: var(--lucent-radius-md);
+  border: 1px solid hsl(var(--lucent-border) / var(--lucent-glass-opacity));
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+          backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-sm);
+  transition:
+    border-color var(--lucent-duration-fast) var(--lucent-ease-standard),
+    box-shadow var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-textarea-wrapper:focus-within {
+  border-color: hsl(var(--lucent-accent) / 0.6);
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-sm), var(--lucent-focus-ring);
+}
+
+.lucent-textarea-wrapper--invalid {
+  border-color: hsl(var(--lucent-danger) / 0.7);
+}
+
+.lucent-textarea-wrapper--invalid:focus-within {
+  border-color: hsl(var(--lucent-danger));
+}
+
+.lucent-textarea {
+  flex: 1;
+  min-inline-size: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-block: var(--lucent-space-3);
+  padding-inline: var(--lucent-space-3);
+  color: hsl(var(--lucent-on-surface));
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-body-size);
+  line-height: var(--lucent-type-body-leading);
+  resize: vertical;
+  min-block-size: calc(var(--lucent-control-h) * 2);
+}
+
+.lucent-textarea::placeholder {
+  color: hsl(var(--lucent-on-surface-muted));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-textarea-wrapper {
+    transition: none;
+  }
+}

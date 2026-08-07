@@ -1,0 +1,18 @@
+/* Label primitive — type-role tokens only, logical properties. */
+
+.lucent-label {
+  display: inline-block;
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-label-size);
+  font-weight: var(--lucent-type-label-weight);
+  line-height: var(--lucent-type-label-leading);
+  color: hsl(var(--lucent-on-surface));
+  cursor: default;
+}
+
+/* Required indicator — driven by data-required attribute, no JS needed */
+.lucent-label[data-required]::after {
+  content: ' *';
+  color: hsl(var(--lucent-accent));
+  font-weight: 700;
+}
