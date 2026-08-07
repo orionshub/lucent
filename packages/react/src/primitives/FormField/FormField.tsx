@@ -73,15 +73,19 @@ export function FormField({
   const ariaDescribedBy =
     [descId, errId].filter(Boolean).join(' ') || undefined;
 
-  // Inject ARIA props into the direct child control
+  // Inject ARIA props into the direct child control. `isInvalid` is a
+  // Lucent-specific prop consumed by Input/Textarea; only inject it when an
+  // error is actually present so it never leaks onto controls (Slider, Select,
+  // native elements) that don't consume it.
   const child = React.Children.map(children, (c) => {
     if (!React.isValidElement(c) || !id) return c;
-    return React.cloneElement(c as React.ReactElement<Record<string, unknown>>, {
+    const injected: Record<string, unknown> = {
       id,
       'aria-describedby': ariaDescribedBy,
       'aria-invalid': hasError || undefined,
-      isInvalid: hasError || undefined,
-    });
+    };
+    if (hasError) injected.isInvalid = true;
+    return React.cloneElement(c as React.ReactElement<Record<string, unknown>>, injected);
   });
 
   return (
