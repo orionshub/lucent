@@ -170,6 +170,34 @@
       "types": "./dist/primitives/AvatarGroup/index.d.ts",
       "import": "./dist/primitives/AvatarGroup/index.js"
     },
+    "./dialog": {
+      "types": "./dist/primitives/Dialog/index.d.ts",
+      "import": "./dist/primitives/Dialog/index.js"
+    },
+    "./alert-dialog": {
+      "types": "./dist/primitives/AlertDialog/index.d.ts",
+      "import": "./dist/primitives/AlertDialog/index.js"
+    },
+    "./popover": {
+      "types": "./dist/primitives/Popover/index.d.ts",
+      "import": "./dist/primitives/Popover/index.js"
+    },
+    "./tooltip": {
+      "types": "./dist/primitives/Tooltip/index.d.ts",
+      "import": "./dist/primitives/Tooltip/index.js"
+    },
+    "./hover-card": {
+      "types": "./dist/primitives/HoverCard/index.d.ts",
+      "import": "./dist/primitives/HoverCard/index.js"
+    },
+    "./dropdown-menu": {
+      "types": "./dist/primitives/DropdownMenu/index.d.ts",
+      "import": "./dist/primitives/DropdownMenu/index.js"
+    },
+    "./context-menu": {
+      "types": "./dist/primitives/ContextMenu/index.d.ts",
+      "import": "./dist/primitives/ContextMenu/index.js"
+    },
     "./slot": {
       "types": "./dist/utils/Slot/index.d.ts",
       "import": "./dist/utils/Slot/index.js"

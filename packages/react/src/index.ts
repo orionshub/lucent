@@ -129,6 +129,32 @@ export type { ProgressProps, ProgressVariant } from './primitives/Progress/Progr
 export { AvatarGroup } from './primitives/AvatarGroup/AvatarGroup';
 export type { AvatarGroupProps } from './primitives/AvatarGroup/AvatarGroup';
 
+// ─── Phase 5 — Overlays ───────────────────────────────────────────────────
+export { Dialog } from './primitives/Dialog/Dialog';
+export type { DialogContentProps, DialogTitleProps, DialogDescriptionProps } from './primitives/Dialog/Dialog';
+export { AlertDialog } from './primitives/AlertDialog/AlertDialog';
+export type {
+  AlertDialogContentProps, AlertDialogTitleProps, AlertDialogDescriptionProps,
+} from './primitives/AlertDialog/AlertDialog';
+export { Popover } from './primitives/Popover/Popover';
+export type { PopoverContentProps } from './primitives/Popover/Popover';
+export { Tooltip, TooltipProvider } from './primitives/Tooltip/Tooltip';
+export type { TooltipContentProps } from './primitives/Tooltip/Tooltip';
+export { HoverCard } from './primitives/HoverCard/HoverCard';
+export type { HoverCardContentProps } from './primitives/HoverCard/HoverCard';
+export { DropdownMenu } from './primitives/DropdownMenu/DropdownMenu';
+export type {
+  DropdownMenuContentProps, DropdownMenuItemProps, DropdownMenuCheckboxItemProps,
+  DropdownMenuRadioItemProps, DropdownMenuLabelProps, DropdownMenuSeparatorProps,
+  DropdownMenuSubTriggerProps, DropdownMenuSubContentProps,
+} from './primitives/DropdownMenu/DropdownMenu';
+export { ContextMenu } from './primitives/ContextMenu/ContextMenu';
+export type {
+  ContextMenuContentProps, ContextMenuItemProps, ContextMenuCheckboxItemProps,
+  ContextMenuRadioItemProps, ContextMenuLabelProps, ContextMenuSeparatorProps,
+  ContextMenuSubTriggerProps, ContextMenuSubContentProps,
+} from './primitives/ContextMenu/ContextMenu';
+
 // ─── Design tokens (typed TS map) ─────────────────────────────────────────
 // Re-exported via the ./tokens subpath; also available here for convenience.
 // import type { LucentBg } from '@lucent/react' (from the generated TS map)

@@ -1,0 +1,8 @@
+/* AlertDialog reuses the shared .lucent-dialog__overlay / __content glass recipe
+   from dialog.css. This file adds the action-row layout only. */
+.lucent-alert-dialog__content .lucent-alert-dialog__actions {
+  display: flex;
+  gap: var(--lucent-space-3);
+  justify-content: flex-end;
+  margin-block-start: var(--lucent-space-6);
+}

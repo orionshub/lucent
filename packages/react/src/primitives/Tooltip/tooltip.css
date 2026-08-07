@@ -1,0 +1,23 @@
+.lucent-tooltip__content {
+  padding-inline: var(--lucent-space-2);
+  padding-block: var(--lucent-space-1);
+  border-radius: var(--lucent-radius-md);
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  border: 1px solid hsl(var(--lucent-border) / var(--lucent-glass-opacity));
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-sm);
+  color: hsl(var(--lucent-on-surface));
+  font-size: var(--lucent-type-label-size);
+  z-index: 60;
+}
+
+.lucent-tooltip__arrow {
+  fill: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lucent-tooltip__content[data-state='delayed-open'] {
+    animation: lucent-pop-in var(--lucent-duration-fast) var(--lucent-ease-standard);
+  }
+}

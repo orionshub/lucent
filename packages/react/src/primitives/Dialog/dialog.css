@@ -1,0 +1,106 @@
+.lucent-dialog__overlay {
+  position: fixed;
+  inset: 0;
+  background: hsl(var(--lucent-bg) / 0.6);
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  z-index: 50;
+}
+
+.lucent-dialog__content {
+  position: fixed;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  inline-size: min(92vw, 32rem);
+  max-block-size: 85vh;
+  overflow: auto;
+  padding: var(--lucent-space-6);
+  border-radius: var(--lucent-radius-xl);
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  border: 1px solid hsl(var(--lucent-border) / var(--lucent-glass-opacity));
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-lg);
+  color: hsl(var(--lucent-on-surface));
+  z-index: 51;
+}
+
+.lucent-dialog__content:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-lg), var(--lucent-focus-ring);
+}
+
+.lucent-dialog__title {
+  margin: 0;
+  font-size: var(--lucent-type-heading-size);
+  font-weight: var(--lucent-type-heading-weight);
+  line-height: var(--lucent-type-heading-leading);
+}
+
+.lucent-dialog__description {
+  margin-block-start: var(--lucent-space-2);
+  color: hsl(var(--lucent-on-surface-muted));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lucent-dialog__overlay[data-state='open'] {
+    animation: lucent-overlay-in var(--lucent-duration-base) var(--lucent-ease-standard);
+  }
+
+  .lucent-dialog__overlay[data-state='closed'] {
+    animation: lucent-overlay-out var(--lucent-duration-fast) var(--lucent-ease-exit);
+  }
+
+  .lucent-dialog__content[data-state='open'] {
+    animation: lucent-dialog-in var(--lucent-duration-base) var(--lucent-ease-standard);
+  }
+
+  .lucent-dialog__content[data-state='closed'] {
+    animation: lucent-dialog-out var(--lucent-duration-fast) var(--lucent-ease-exit);
+  }
+}
+
+@keyframes lucent-overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lucent-overlay-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes lucent-dialog-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes lucent-dialog-out {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+}

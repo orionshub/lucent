@@ -102,6 +102,14 @@ const CLIENT_ENTRIES = [
   join(DIST, 'primitives', 'Tabs', 'index.js'),
   join(DIST, 'primitives', 'Progress', 'index.js'),
   join(DIST, 'primitives', 'AvatarGroup', 'index.js'),
+  // Phase 5 — Radix overlays
+  join(DIST, 'primitives', 'Dialog', 'index.js'),
+  join(DIST, 'primitives', 'AlertDialog', 'index.js'),
+  join(DIST, 'primitives', 'Popover', 'index.js'),
+  join(DIST, 'primitives', 'Tooltip', 'index.js'),
+  join(DIST, 'primitives', 'HoverCard', 'index.js'),
+  join(DIST, 'primitives', 'DropdownMenu', 'index.js'),
+  join(DIST, 'primitives', 'ContextMenu', 'index.js'),
 ];
 
 for (const entry of CLIENT_ENTRIES) {

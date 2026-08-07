@@ -16,9 +16,10 @@ type MatcherResult = {
 
 export async function toHaveNoViolations(
   received: Element | Document,
+  options?: axe.RunOptions,
 ): Promise<MatcherResult> {
   const container = received instanceof Document ? received.body : received;
-  const results = await axe.run(container);
+  const results = await axe.run(container, options);
   const violations = results.violations;
 
   if (violations.length === 0) {
@@ -46,9 +47,9 @@ export async function toHaveNoViolations(
 // Extend Vitest's expect with the matcher type
 declare module 'vitest' {
   interface Assertion {
-    toHaveNoViolations(): Promise<void>;
+    toHaveNoViolations(options?: axe.RunOptions): Promise<void>;
   }
   interface AsymmetricMatchersContaining {
-    toHaveNoViolations(): Promise<void>;
+    toHaveNoViolations(options?: axe.RunOptions): Promise<void>;
   }
 }

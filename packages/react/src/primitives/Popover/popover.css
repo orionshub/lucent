@@ -1,0 +1,56 @@
+.lucent-popover__content {
+  min-inline-size: 12rem;
+  max-inline-size: min(92vw, 22rem);
+  padding: var(--lucent-space-4);
+  border-radius: var(--lucent-radius-lg);
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  border: 1px solid hsl(var(--lucent-border) / var(--lucent-glass-opacity));
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-md);
+  color: hsl(var(--lucent-on-surface));
+  z-index: 50;
+}
+
+.lucent-popover__content:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-md), var(--lucent-focus-ring);
+}
+
+.lucent-popover__arrow {
+  fill: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lucent-popover__content[data-state='open'] {
+    animation: lucent-pop-in var(--lucent-duration-fast) var(--lucent-ease-standard);
+  }
+
+  .lucent-popover__content[data-state='closed'] {
+    animation: lucent-pop-out var(--lucent-duration-fast) var(--lucent-ease-exit);
+  }
+}
+
+@keyframes lucent-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes lucent-pop-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}

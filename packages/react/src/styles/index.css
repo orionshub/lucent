@@ -62,3 +62,11 @@
 @import '../primitives/Callout/callout.css';
 @import '../primitives/Progress/progress.css';
 @import '../primitives/AvatarGroup/avatar-group.css';
+
+/* Phase 5 — overlays */
+@import '../primitives/Dialog/dialog.css';
+@import '../primitives/AlertDialog/alert-dialog.css';
+@import '../primitives/Popover/popover.css';
+@import '../primitives/Tooltip/tooltip.css';
+@import '../primitives/HoverCard/hover-card.css';
+@import './menu.css';

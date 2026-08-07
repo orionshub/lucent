@@ -1,0 +1,83 @@
+/* Shared glass menu recipe — consumed by DropdownMenu and ContextMenu. */
+
+.lucent-menu {
+  min-inline-size: 12rem;
+  padding-block: var(--lucent-space-2);
+  border-radius: var(--lucent-radius-lg);
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  border: 1px solid hsl(var(--lucent-border) / var(--lucent-glass-opacity));
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-md);
+  color: hsl(var(--lucent-on-surface));
+  z-index: 55;
+}
+
+.lucent-menu__item,
+.lucent-menu__sub-trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--lucent-space-2);
+  padding-inline: var(--lucent-space-3);
+  padding-block: var(--lucent-space-2);
+  margin-inline: var(--lucent-space-1);
+  border-radius: var(--lucent-radius-xs);
+  font-size: var(--lucent-type-body-size);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+
+.lucent-menu__item[data-highlighted],
+.lucent-menu__sub-trigger[data-highlighted],
+.lucent-menu__sub-trigger[data-state='open'] {
+  background: hsl(var(--lucent-accent) / 0.15);
+  color: hsl(var(--lucent-accent));
+}
+
+.lucent-menu__item[data-disabled],
+.lucent-menu__sub-trigger[data-disabled] {
+  color: hsl(var(--lucent-on-surface-muted));
+  pointer-events: none;
+}
+
+.lucent-menu__item--destructive {
+  color: hsl(var(--lucent-danger));
+}
+
+.lucent-menu__item--destructive[data-highlighted] {
+  background: hsl(var(--lucent-danger) / 0.15);
+  color: hsl(var(--lucent-danger));
+}
+
+.lucent-menu__label {
+  padding-inline: var(--lucent-space-3);
+  padding-block: var(--lucent-space-1);
+  color: hsl(var(--lucent-on-surface-muted));
+  font-size: var(--lucent-type-label-size);
+  font-weight: var(--lucent-type-label-weight);
+}
+
+.lucent-menu__separator {
+  block-size: 1px;
+  margin-block: var(--lucent-space-1);
+  margin-inline: var(--lucent-space-2);
+  background: hsl(var(--lucent-border) / var(--lucent-glass-opacity));
+}
+
+.lucent-menu__indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--lucent-space-4);
+}
+
+.lucent-menu__sub-trigger-chevron {
+  margin-inline-start: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lucent-menu[data-state='open'] {
+    animation: lucent-pop-in var(--lucent-duration-fast) var(--lucent-ease-standard);
+  }
+}
