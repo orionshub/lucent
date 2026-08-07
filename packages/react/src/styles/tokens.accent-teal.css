@@ -1,8 +1,7 @@
-/**
- * Do not edit directly, this file was auto-generated.
+/* Teal accent preset — hand-authored override (SD cannot emit per-context
+ * values for the same semantic token). Remaps --lucent-accent to the teal
+ * primitive when data-accent="teal" is set on the document root.
  */
-
 [data-accent="teal"] {
-  --lucent-accent: 190 95% 55%; /** Cyan accent (default preset — runtime swappable via data-accent) */
-  --lucent-on-accent: 225 40% 8%; /** Dark ink on bright accent */
+  --lucent-accent: var(--lucent-color-teal-500);
 }

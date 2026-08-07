@@ -1,7 +1,7 @@
-/**
- * Do not edit directly, this file was auto-generated.
+/* Compact density — hand-authored override (SD cannot emit per-context values
+ * for the same semantic token). Remaps --lucent-control-h to the compact step
+ * when data-density="compact" is set on the document root.
  */
-
 [data-density="compact"] {
-  --lucent-control-h: 44px; /** Control height — airy default (44px) */
+  --lucent-control-h: var(--lucent-control-h-compact);
 }

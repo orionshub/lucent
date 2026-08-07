@@ -61,7 +61,10 @@ if (existsSync(DIST_INDEX_CSS)) {
       const importPath = join(DIST, 'styles', importMatch[1]);
       if (existsSync(importPath)) {
         output.push(`/* inlined from ${importMatch[1]} */`);
-        output.push(readFileSync(importPath, 'utf8'));
+        // Strip any leading UTF-8 BOM — when inlined mid-stream a BOM corrupts
+        // the following selector (e.g. `\uFEFF[data-theme="light"]` never matches),
+        // silently breaking variant token blocks. Harmless in a standalone file.
+        output.push(readFileSync(importPath, 'utf8').replace(/^\uFEFF/, ''));
       } else {
         // Keep the @import as-is if the file doesn't exist (safe fallback)
         output.push(line);

@@ -64,54 +64,12 @@ const sd = new StyleDictionary({
         },
         // NOTE: Theme/accent/density override files are hand-authored (not SD-generated)
         // because SD cannot output different values for the same semantic token per context.
-        // See: src/styles/tokens.light.css, tokens.accent-violet.css, tokens.accent-teal.css,
-        //      tokens.density-balanced.css, tokens.density-compact.css
-        // Violet accent preset
-        {
-          destination: 'src/styles/tokens.accent-violet.css',
-          format: 'css/variables',
-          options: {
-            outputReferences: false,
-            selector: '[data-accent="violet"]',
-          },
-          filter: (token) =>
-            token.filePath.includes('semantic') &&
-            (token.name === 'lucent-accent' || token.name === 'lucent-on-accent'),
-        },
-        // Teal accent preset
-        {
-          destination: 'src/styles/tokens.accent-teal.css',
-          format: 'css/variables',
-          options: {
-            outputReferences: false,
-            selector: '[data-accent="teal"]',
-          },
-          filter: (token) =>
-            token.filePath.includes('semantic') &&
-            (token.name === 'lucent-accent' || token.name === 'lucent-on-accent'),
-        },
-        // Balanced density
-        {
-          destination: 'src/styles/tokens.density-balanced.css',
-          format: 'css/variables',
-          options: {
-            outputReferences: false,
-            selector: '[data-density="balanced"]',
-          },
-          filter: (token) =>
-            token.filePath.includes('semantic') && token.name === 'lucent-control-h',
-        },
-        // Compact density
-        {
-          destination: 'src/styles/tokens.density-compact.css',
-          format: 'css/variables',
-          options: {
-            outputReferences: false,
-            selector: '[data-density="compact"]',
-          },
-          filter: (token) =>
-            token.filePath.includes('semantic') && token.name === 'lucent-control-h',
-        },
+        // A single semantic token has ONE value, so SD would emit the DEFAULT (cyan / airy)
+        // into every variant file — silently breaking runtime accent/density switching.
+        // These live as hand-authored files and are intentionally NOT generated here:
+        //   src/styles/tokens.light.css
+        //   src/styles/tokens.accent-violet.css, tokens.accent-teal.css
+        //   src/styles/tokens.density-balanced.css, tokens.density-compact.css
       ],
     },
 

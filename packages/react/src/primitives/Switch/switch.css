@@ -6,6 +6,7 @@
   position: relative;
   inline-size: 44px;
   block-size: 24px;
+  padding: 0;
   border-radius: var(--lucent-radius-pill);
   border: 1px solid hsl(var(--lucent-border));
   background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
