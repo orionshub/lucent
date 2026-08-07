@@ -1,6 +1,7 @@
-/* Balanced density — runtime-selectable via data-density="balanced" on <html>.
- * Values from UI-SPEC.md §Density Axis (D-20).
+/**
+ * Do not edit directly, this file was auto-generated.
  */
+
 [data-density="balanced"] {
-  --lucent-control-h: 40px;
+  --lucent-control-h: 44px; /** Control height — airy default (44px) */
 }

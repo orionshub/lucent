@@ -1,6 +1,7 @@
-/* Compact density — runtime-selectable via data-density="compact" on <html>.
- * Values from UI-SPEC.md §Density Axis (D-20).
+/**
+ * Do not edit directly, this file was auto-generated.
  */
+
 [data-density="compact"] {
-  --lucent-control-h: 32px;
+  --lucent-control-h: 44px; /** Control height — airy default (44px) */
 }

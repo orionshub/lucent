@@ -35,3 +35,16 @@
 @import '../primitives/Button/button.css';
 @import '../primitives/IconButton/icon-button.css';
 @import '../primitives/Link/link.css';
+
+/* Phase 3 — form controls */
+@import '../primitives/Label/label.css';
+@import '../primitives/Input/input.css';
+@import '../primitives/Textarea/textarea.css';
+@import '../primitives/FormField/form-field.css';
+@import '../primitives/Checkbox/checkbox.css';
+@import '../primitives/Switch/switch.css';
+@import '../primitives/Toggle/toggle.css';
+@import '../primitives/ToggleGroup/toggle-group.css';
+@import '../primitives/RadioGroup/radio-group.css';
+@import '../primitives/Slider/slider.css';
+@import '../primitives/Select/select.css';

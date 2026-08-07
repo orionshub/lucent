@@ -7,6 +7,7 @@
     "node": ">=22"
   },
   "scripts": {
+    "dev": "pnpm --filter @lucent/demo dev",
     "build": "pnpm --filter @lucent/react build",
     "test": "pnpm --filter @lucent/react test",
     "ci": "pnpm --filter @lucent/react ci",

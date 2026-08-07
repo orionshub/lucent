@@ -1,7 +1,8 @@
-/* Teal accent preset — runtime-selectable via data-accent="teal" on <html>.
- * Values from UI-SPEC.md §Accent presets (D-15).
+/**
+ * Do not edit directly, this file was auto-generated.
  */
+
 [data-accent="teal"] {
-  --lucent-accent: 168 80% 46%; /* hsl channel triplet: teal-500 */
-  --lucent-on-accent: 170 45% 8%; /* dark ink on teal */
+  --lucent-accent: 190 95% 55%; /** Cyan accent (default preset — runtime swappable via data-accent) */
+  --lucent-on-accent: 225 40% 8%; /** Dark ink on bright accent */
 }

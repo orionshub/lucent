@@ -38,6 +38,50 @@
       "types": "./dist/primitives/GlassSurface/index.d.ts",
       "import": "./dist/primitives/GlassSurface/index.js"
     },
+    "./label": {
+      "types": "./dist/primitives/Label/index.d.ts",
+      "import": "./dist/primitives/Label/index.js"
+    },
+    "./input": {
+      "types": "./dist/primitives/Input/index.d.ts",
+      "import": "./dist/primitives/Input/index.js"
+    },
+    "./textarea": {
+      "types": "./dist/primitives/Textarea/index.d.ts",
+      "import": "./dist/primitives/Textarea/index.js"
+    },
+    "./checkbox": {
+      "types": "./dist/primitives/Checkbox/index.d.ts",
+      "import": "./dist/primitives/Checkbox/index.js"
+    },
+    "./radio-group": {
+      "types": "./dist/primitives/RadioGroup/index.d.ts",
+      "import": "./dist/primitives/RadioGroup/index.js"
+    },
+    "./switch": {
+      "types": "./dist/primitives/Switch/index.d.ts",
+      "import": "./dist/primitives/Switch/index.js"
+    },
+    "./toggle": {
+      "types": "./dist/primitives/Toggle/index.d.ts",
+      "import": "./dist/primitives/Toggle/index.js"
+    },
+    "./toggle-group": {
+      "types": "./dist/primitives/ToggleGroup/index.d.ts",
+      "import": "./dist/primitives/ToggleGroup/index.js"
+    },
+    "./select": {
+      "types": "./dist/primitives/Select/index.d.ts",
+      "import": "./dist/primitives/Select/index.js"
+    },
+    "./slider": {
+      "types": "./dist/primitives/Slider/index.d.ts",
+      "import": "./dist/primitives/Slider/index.js"
+    },
+    "./form-field": {
+      "types": "./dist/primitives/FormField/index.d.ts",
+      "import": "./dist/primitives/FormField/index.js"
+    },
     "./button": {
       "types": "./dist/primitives/Button/index.d.ts",
       "import": "./dist/primitives/Button/index.js"

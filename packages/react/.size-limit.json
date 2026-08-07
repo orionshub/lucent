@@ -14,7 +14,7 @@
   {
     "name": "@lucent/react — root barrel",
     "path": "./dist/index.js",
-    "limit": "24 KB",
+    "limit": "36 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
@@ -104,6 +104,72 @@
     "name": "@lucent/react — AccessibleIcon",
     "path": "./dist/utils/AccessibleIcon/index.js",
     "limit": "1.5 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — Label",
+    "path": "./dist/primitives/Label/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom"]
+  },
+  {
+    "name": "@lucent/react — Input",
+    "path": "./dist/primitives/Input/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — Textarea",
+    "path": "./dist/primitives/Textarea/index.js",
+    "limit": "1.5 KB",
+    "ignore": ["react", "react-dom"]
+  },
+  {
+    "name": "@lucent/react — FormField",
+    "path": "./dist/primitives/FormField/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom"]
+  },
+  {
+    "name": "@lucent/react — Checkbox",
+    "path": "./dist/primitives/Checkbox/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — Switch",
+    "path": "./dist/primitives/Switch/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — Toggle",
+    "path": "./dist/primitives/Toggle/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — ToggleGroup",
+    "path": "./dist/primitives/ToggleGroup/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — RadioGroup",
+    "path": "./dist/primitives/RadioGroup/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — Slider",
+    "path": "./dist/primitives/Slider/index.js",
+    "limit": "2 KB",
+    "ignore": ["react", "react-dom", "radix-ui"]
+  },
+  {
+    "name": "@lucent/react — Select",
+    "path": "./dist/primitives/Select/index.js",
+    "limit": "4 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   }
 ]

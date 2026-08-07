@@ -87,6 +87,14 @@ const CLIENT_ENTRIES = [
   join(DIST, 'theme', 'index.js'),
   join(DIST, 'utils', 'Portal', 'index.js'),
   join(DIST, 'primitives', 'Avatar', 'index.js'),
+  // Phase 3 — Radix form controls (all carry "use client")
+  join(DIST, 'primitives', 'Checkbox', 'index.js'),
+  join(DIST, 'primitives', 'RadioGroup', 'index.js'),
+  join(DIST, 'primitives', 'Switch', 'index.js'),
+  join(DIST, 'primitives', 'Toggle', 'index.js'),
+  join(DIST, 'primitives', 'ToggleGroup', 'index.js'),
+  join(DIST, 'primitives', 'Select', 'index.js'),
+  join(DIST, 'primitives', 'Slider', 'index.js'),
 ];
 
 for (const entry of CLIENT_ENTRIES) {
