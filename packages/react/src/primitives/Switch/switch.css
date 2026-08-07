@@ -1,0 +1,63 @@
+/* Switch primitive — pill track + sliding thumb, data-state-driven, logical properties. */
+
+.lucent-switch {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  inline-size: 44px;
+  block-size: 24px;
+  border-radius: var(--lucent-radius-pill);
+  border: 1px solid hsl(var(--lucent-border));
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+          backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+  cursor: pointer;
+  transition:
+    background var(--lucent-duration-base) var(--lucent-ease-standard),
+    border-color var(--lucent-duration-base) var(--lucent-ease-standard);
+}
+
+.lucent-switch[data-state="checked"] {
+  background: hsl(var(--lucent-accent));
+  border-color: hsl(var(--lucent-accent));
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+
+.lucent-switch:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-focus-ring);
+}
+
+.lucent-switch[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ─── Thumb ──────────────────────────────────────────────────────────────── */
+
+.lucent-switch__thumb {
+  display: block;
+  block-size: 18px;
+  inline-size: 18px;
+  border-radius: var(--lucent-radius-pill);
+  background: hsl(var(--lucent-on-surface-muted));
+  box-shadow: var(--lucent-shadow-sm);
+  transform: translateX(2px);
+  transition: transform var(--lucent-duration-base) var(--lucent-ease-standard),
+              background var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-switch[data-state="checked"] .lucent-switch__thumb {
+  transform: translateX(22px);
+  background: hsl(var(--lucent-on-accent));
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-switch,
+  .lucent-switch__thumb {
+    transition: none;
+  }
+}

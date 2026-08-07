@@ -1,0 +1,72 @@
+/* Checkbox primitive — data-state-driven, token-only, logical properties. */
+
+.lucent-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 18px;
+  inline-size: 18px;
+  flex-shrink: 0;
+  border-radius: var(--lucent-radius-xs);
+  border: 2px solid hsl(var(--lucent-border));
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+          backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+  cursor: pointer;
+  transition:
+    background var(--lucent-duration-fast) var(--lucent-ease-standard),
+    border-color var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-checkbox[data-state="checked"],
+.lucent-checkbox[data-state="indeterminate"] {
+  background: hsl(var(--lucent-accent));
+  border-color: hsl(var(--lucent-accent));
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+
+.lucent-checkbox:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-focus-ring);
+}
+
+.lucent-checkbox[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ─── Indicator ──────────────────────────────────────────────────────────── */
+
+.lucent-checkbox__indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(var(--lucent-on-accent));
+}
+
+/* Check mark: hidden by default, shown on checked */
+.lucent-checkbox__check {
+  display: none;
+}
+
+.lucent-checkbox[data-state="checked"] .lucent-checkbox__check {
+  display: block;
+}
+
+/* Dash: hidden by default, shown on indeterminate */
+.lucent-checkbox__dash {
+  display: none;
+  block-size: 2px;
+  inline-size: 10px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.lucent-checkbox[data-state="indeterminate"] .lucent-checkbox__dash {
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-checkbox { transition: none; }
+}
