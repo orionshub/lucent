@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import {
   LucentProvider,
   GlassSurface,
@@ -87,7 +88,10 @@ function ToastDemo() {
         <Toast.Description>Your changes were saved successfully.</Toast.Description>
         <Toast.Close aria-label="Dismiss" style={{ marginInlineStart: 'auto' }}>×</Toast.Close>
       </Toast.Root>
-      <Toast.Viewport />
+      {/* The Viewport must live outside any backdrop-filter/transform ancestor
+          (those create a containing block that traps position:fixed). Portaling
+          to <body> is the demo's way of placing it at the app root. */}
+      {createPortal(<Toast.Viewport />, document.body)}
     </ToastProvider>
   );
 }
@@ -275,7 +279,7 @@ export default function App() {
             Lucent
           </h1>
           <p style={{ margin: 0, color: 'hsl(var(--lucent-on-surface-muted))', fontSize: 14 }}>
-            Glassmorphic React component library — Phase 1 demo
+            Glassmorphic React component library — component showcase
           </p>
           <button
             onClick={() => setShowPanel((v) => !v)}
