@@ -1,0 +1,20 @@
+/* ToggleGroup layout — items share lucent-toggle class from toggle.css */
+
+.lucent-toggle-group {
+  display: inline-flex;
+  gap: 2px;
+  background: hsl(var(--lucent-surface) / 0.4);
+  border: 1px solid hsl(var(--lucent-border) / 0.5);
+  border-radius: calc(var(--lucent-radius-md) + 2px);
+  padding: 2px;
+}
+
+.lucent-toggle-group__item {
+  border-radius: var(--lucent-radius-md);
+  /* inherit all .lucent-toggle styles from toggle.css */
+}
+
+/* Override border for items inside the group — seamless */
+.lucent-toggle-group .lucent-toggle {
+  border: none;
+}

@@ -1,0 +1,49 @@
+/* Toggle primitive — shared .lucent-toggle class (also used by ToggleGroup.Item) */
+
+.lucent-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--lucent-space-2);
+  block-size: var(--lucent-control-h);
+  padding-inline: var(--lucent-space-3);
+  border-radius: var(--lucent-radius-md);
+  border: 1px solid hsl(var(--lucent-border) / 0.6);
+  background: transparent;
+  color: hsl(var(--lucent-on-surface-muted));
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-body-size);
+  cursor: pointer;
+  transition:
+    background var(--lucent-duration-fast) var(--lucent-ease-standard),
+    color var(--lucent-duration-fast) var(--lucent-ease-standard),
+    border-color var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-toggle[data-state="on"] {
+  background: hsl(var(--lucent-accent) / 0.15);
+  border-color: hsl(var(--lucent-accent) / 0.5);
+  color: hsl(var(--lucent-accent));
+}
+
+.lucent-toggle:hover {
+  background: hsl(var(--lucent-surface) / 0.4);
+}
+
+.lucent-toggle[data-state="on"]:hover {
+  background: hsl(var(--lucent-accent) / 0.22);
+}
+
+.lucent-toggle:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-focus-ring);
+}
+
+.lucent-toggle[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-toggle { transition: none; }
+}
