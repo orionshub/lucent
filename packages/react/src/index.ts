@@ -155,6 +155,18 @@ export type {
   ContextMenuSubTriggerProps, ContextMenuSubContentProps,
 } from './primitives/ContextMenu/ContextMenu';
 
+// ─── Phase 6 — Feedback & Toast ───────────────────────────────────────────
+export { Toast, ToastProvider } from './primitives/Toast/Toast';
+export type {
+  ToastViewportProps, ToastRootProps, ToastTone, ToastTitleProps, ToastDescriptionProps,
+} from './primitives/Toast/Toast';
+export { Spinner } from './primitives/Spinner/Spinner';
+export type { SpinnerProps, SpinnerSize } from './primitives/Spinner/Spinner';
+export { Skeleton } from './primitives/Skeleton/Skeleton';
+export type { SkeletonProps, SkeletonVariant } from './primitives/Skeleton/Skeleton';
+export { EmptyState } from './primitives/EmptyState/EmptyState';
+export type { EmptyStateProps } from './primitives/EmptyState/EmptyState';
+
 // ─── Design tokens (typed TS map) ─────────────────────────────────────────
 // Re-exported via the ./tokens subpath; also available here for convenience.
 // import type { LucentBg } from '@lucent/react' (from the generated TS map)

@@ -110,6 +110,8 @@ const CLIENT_ENTRIES = [
   join(DIST, 'primitives', 'HoverCard', 'index.js'),
   join(DIST, 'primitives', 'DropdownMenu', 'index.js'),
   join(DIST, 'primitives', 'ContextMenu', 'index.js'),
+  // Phase 6 — Toast (Radix)
+  join(DIST, 'primitives', 'Toast', 'index.js'),
 ];
 
 for (const entry of CLIENT_ENTRIES) {

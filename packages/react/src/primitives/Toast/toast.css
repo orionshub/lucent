@@ -1,0 +1,99 @@
+.lucent-toast__viewport {
+  position: fixed;
+  inset-block-end: var(--lucent-space-4);
+  inset-inline-end: var(--lucent-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--lucent-space-2);
+  inline-size: min(92vw, 24rem);
+  max-inline-size: 100vw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 70;
+  outline: none;
+}
+
+.lucent-toast {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lucent-space-1);
+  padding-block: var(--lucent-space-3);
+  padding-inline: var(--lucent-space-4);
+  border-radius: var(--lucent-radius-lg);
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  backdrop-filter: blur(min(var(--lucent-glass-blur), var(--lucent-blur-max)));
+  border: 1px solid hsl(var(--lucent-toast-tint) / 0.4);
+  border-inline-start: 3px solid hsl(var(--lucent-toast-tint));
+  box-shadow: var(--lucent-edge), var(--lucent-shadow-md);
+  color: hsl(var(--lucent-on-surface));
+}
+
+.lucent-toast--info {
+  --lucent-toast-tint: var(--lucent-accent);
+}
+
+.lucent-toast--success {
+  --lucent-toast-tint: var(--lucent-color-teal-500);
+}
+
+.lucent-toast--warning {
+  /* No dedicated warning token in the palette — amber literal (unitless HSL). */
+  --lucent-toast-tint: 38 92% 55%;
+}
+
+.lucent-toast--danger {
+  --lucent-toast-tint: var(--lucent-danger);
+}
+
+.lucent-toast__title {
+  font-weight: var(--lucent-type-label-weight);
+}
+
+.lucent-toast__description {
+  color: hsl(var(--lucent-on-surface-muted));
+  font-size: var(--lucent-type-label-size);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lucent-toast[data-state='open'] {
+    animation: lucent-toast-in var(--lucent-duration-base) var(--lucent-ease-standard);
+  }
+
+  .lucent-toast[data-state='closed'] {
+    animation: lucent-toast-out var(--lucent-duration-fast) var(--lucent-ease-exit);
+  }
+
+  .lucent-toast[data-swipe='move'] {
+    transform: translateX(var(--radix-toast-swipe-move-x));
+  }
+
+  .lucent-toast[data-swipe='end'] {
+    animation: lucent-toast-out var(--lucent-duration-fast) var(--lucent-ease-exit);
+  }
+}
+
+@keyframes lucent-toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes lucent-toast-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

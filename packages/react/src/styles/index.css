@@ -70,3 +70,9 @@
 @import '../primitives/Tooltip/tooltip.css';
 @import '../primitives/HoverCard/hover-card.css';
 @import './menu.css';
+
+/* Phase 6 — feedback & toast */
+@import '../primitives/Toast/toast.css';
+@import '../primitives/Spinner/spinner.css';
+@import '../primitives/Skeleton/skeleton.css';
+@import '../primitives/EmptyState/empty-state.css';

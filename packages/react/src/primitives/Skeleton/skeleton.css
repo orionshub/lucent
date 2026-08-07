@@ -1,0 +1,42 @@
+.lucent-skeleton {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--lucent-surface) / 0.5) 25%,
+    hsl(var(--lucent-border) / 0.5) 37%,
+    hsl(var(--lucent-surface) / 0.5) 63%
+  );
+  background-size: 400% 100%;
+  animation: lucent-shimmer 1.4s ease infinite;
+}
+
+.lucent-skeleton--text {
+  block-size: 1em;
+  border-radius: var(--lucent-radius-xs);
+}
+
+.lucent-skeleton--rect {
+  block-size: 100%;
+  border-radius: var(--lucent-radius-md);
+}
+
+.lucent-skeleton--circle {
+  border-radius: var(--lucent-radius-pill);
+  aspect-ratio: 1 / 1;
+}
+
+@keyframes lucent-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-skeleton {
+    animation: none;
+    background: hsl(var(--lucent-border) / 0.4);
+  }
+}

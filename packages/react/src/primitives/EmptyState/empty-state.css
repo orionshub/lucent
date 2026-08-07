@@ -1,0 +1,31 @@
+.lucent-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--lucent-space-3);
+  padding: var(--lucent-space-8);
+  border-radius: var(--lucent-radius-lg);
+  text-align: center;
+  color: hsl(var(--lucent-on-surface));
+}
+
+.lucent-empty-state__icon {
+  display: inline-flex;
+  color: hsl(var(--lucent-on-surface-muted));
+}
+
+.lucent-empty-state__title {
+  margin: 0;
+  font-size: var(--lucent-type-heading-size);
+  font-weight: var(--lucent-type-heading-weight);
+}
+
+.lucent-empty-state__desc {
+  margin: 0;
+  max-inline-size: 40ch;
+  color: hsl(var(--lucent-on-surface-muted));
+}
+
+.lucent-empty-state__action {
+  margin-block-start: var(--lucent-space-2);
+}

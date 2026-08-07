@@ -198,6 +198,22 @@
       "types": "./dist/primitives/ContextMenu/index.d.ts",
       "import": "./dist/primitives/ContextMenu/index.js"
     },
+    "./toast": {
+      "types": "./dist/primitives/Toast/index.d.ts",
+      "import": "./dist/primitives/Toast/index.js"
+    },
+    "./spinner": {
+      "types": "./dist/primitives/Spinner/index.d.ts",
+      "import": "./dist/primitives/Spinner/index.js"
+    },
+    "./skeleton": {
+      "types": "./dist/primitives/Skeleton/index.d.ts",
+      "import": "./dist/primitives/Skeleton/index.js"
+    },
+    "./empty-state": {
+      "types": "./dist/primitives/EmptyState/index.d.ts",
+      "import": "./dist/primitives/EmptyState/index.js"
+    },
     "./slot": {
       "types": "./dist/utils/Slot/index.d.ts",
       "import": "./dist/utils/Slot/index.js"
