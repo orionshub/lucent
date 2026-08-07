@@ -1,0 +1,133 @@
+/* Select primitive — glass trigger + glass portalled dropdown, logical properties. */
+
+/* ─── Trigger (glass surface on <button>) ───────────────────────────────── */
+
+.lucent-select__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--lucent-space-2);
+  block-size: var(--lucent-control-h);
+  inline-size: 100%;
+  padding-inline: var(--lucent-space-3);
+  border-radius: var(--lucent-radius-md);
+  border: 1px solid hsl(var(--lucent-border) / var(--lucent-glass-opacity));
+  background: hsl(var(--lucent-surface) / var(--lucent-glass-opacity));
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+          backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+  color: hsl(var(--lucent-on-surface));
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-body-size);
+  cursor: pointer;
+  transition:
+    border-color var(--lucent-duration-fast) var(--lucent-ease-standard),
+    box-shadow var(--lucent-duration-fast) var(--lucent-ease-standard);
+}
+
+.lucent-select__trigger:focus-visible {
+  outline: none;
+  box-shadow: var(--lucent-focus-ring);
+  border-color: hsl(var(--lucent-accent) / 0.6);
+}
+
+.lucent-select__trigger[data-placeholder] .lucent-select__value {
+  color: hsl(var(--lucent-on-surface-muted));
+}
+
+.lucent-select__icon {
+  flex-shrink: 0;
+  color: hsl(var(--lucent-on-surface-muted));
+}
+
+/* ─── Dropdown content (portalled glass card) ───────────────────────────── */
+
+.lucent-select__content {
+  background: hsl(var(--lucent-surface) / 0.95);
+  -webkit-backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+          backdrop-filter: blur(min(var(--lucent-glass-blur), 24px));
+  border: 1px solid hsl(var(--lucent-border) / 0.5);
+  border-radius: var(--lucent-radius-md);
+  box-shadow: var(--lucent-shadow-lg), var(--lucent-edge);
+  overflow: hidden;
+  z-index: 50;
+  min-inline-size: var(--radix-select-trigger-width);
+  max-block-size: 280px;
+}
+
+.lucent-select__viewport {
+  padding-block: var(--lucent-space-1);
+}
+
+.lucent-select__scroll-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 24px;
+  color: hsl(var(--lucent-on-surface-muted));
+  cursor: default;
+}
+
+/* ─── Items ──────────────────────────────────────────────────────────────── */
+
+.lucent-select__item {
+  display: flex;
+  align-items: center;
+  gap: var(--lucent-space-2);
+  padding-inline: var(--lucent-space-3);
+  padding-block: var(--lucent-space-2);
+  font-family: var(--lucent-font-sans);
+  font-size: var(--lucent-type-body-size);
+  color: hsl(var(--lucent-on-surface));
+  border-radius: var(--lucent-radius-sm);
+  cursor: default;
+  outline: none;
+  transition: background var(--lucent-duration-fast) var(--lucent-ease-standard);
+  user-select: none;
+}
+
+.lucent-select__item[data-highlighted] {
+  background: hsl(var(--lucent-accent) / 0.15);
+  color: hsl(var(--lucent-accent));
+}
+
+.lucent-select__item[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lucent-select__item-indicator {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  inline-size: 16px;
+  color: hsl(var(--lucent-accent));
+}
+
+.lucent-select__item-text {
+  flex: 1;
+}
+
+/* ─── Group / Label / Separator ─────────────────────────────────────────── */
+
+.lucent-select__group { padding-block: var(--lucent-space-1); }
+
+.lucent-select__label {
+  padding-inline: var(--lucent-space-3);
+  padding-block: var(--lucent-space-1);
+  font-size: var(--lucent-type-label-size);
+  font-weight: var(--lucent-type-label-weight);
+  color: hsl(var(--lucent-on-surface-muted));
+}
+
+.lucent-select__separator {
+  block-size: 1px;
+  margin-block: var(--lucent-space-1);
+  background: hsl(var(--lucent-border) / 0.4);
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .lucent-select__trigger,
+  .lucent-select__item { transition: none; }
+}
