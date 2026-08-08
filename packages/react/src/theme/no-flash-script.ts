@@ -10,8 +10,8 @@
  * value (injection attempt) falls back silently to defaults.
  *
  * Usage:
- *   // Next.js App Router (layout.tsx):
- *   import { noFlashScript } from '@lucent/react/theme';
+ *   // Next.js App Router (layout.tsx — a Server Component):
+ *   import { noFlashScript } from '@lucent/react/no-flash';
  *   export default function RootLayout({ children }) {
  *     return (
  *       <html>

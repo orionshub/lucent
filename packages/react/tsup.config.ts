@@ -8,6 +8,9 @@ export default defineConfig({
     'src/primitives/*/index.ts',
     'src/utils/*/index.ts',
     'src/theme/index.ts',
+    // Server-safe standalone entry so SSR head-injection can import the no-flash
+    // script without pulling the client theme barrel (RSC-safe).
+    'src/theme/no-flash-script.ts',
     'src/tokens/index.ts',
   ],
 

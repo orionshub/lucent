@@ -71,3 +71,12 @@ jobs:
       - name: Tree-shake smoke fixture
         working-directory: packages/react
         run: node test/tree-shake.fixture.mjs
+
+      - name: Tree-shake production fixture (subpath pruning)
+        working-directory: packages/react
+        run: node test/tree-shake.prod.mjs
+
+      - name: Next.js App Router smoke build (SSR + "use client" boundaries)
+        working-directory: apps/next-smoke
+        run: pnpm build
+

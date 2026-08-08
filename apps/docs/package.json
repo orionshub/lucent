@@ -1,0 +1,28 @@
+{
+  "name": "@lucent/docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "VitePress documentation site for @lucent/react",
+  "scripts": {
+    "predocs:dev": "node scripts/gen-props.mjs && node scripts/gen-pages.mjs",
+    "docs:dev": "vitepress dev",
+    "docs:gen": "node scripts/gen-props.mjs && node scripts/gen-pages.mjs",
+    "docs:build": "node scripts/gen-props.mjs && node scripts/gen-pages.mjs && vitepress build",
+    "docs:preview": "vitepress preview",
+    "dev": "pnpm run docs:gen && vitepress dev"
+  },
+  "dependencies": {
+    "@lucent/react": "workspace:*",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "react-docgen-typescript": "^2.2.2",
+    "typescript": "^5.9.2",
+    "vitepress": "^1.6.4"
+  }
+}

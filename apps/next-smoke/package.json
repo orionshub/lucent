@@ -1,0 +1,23 @@
+{
+  "name": "@lucent/next-smoke",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Minimal Next.js App Router smoke build — proves @lucent/react SSR + \"use client\" boundaries under a real RSC compiler (DOCS-03).",
+  "scripts": {
+    "build": "next build",
+    "start": "next start",
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "@lucent/react": "workspace:*",
+    "next": "^15.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.9.2"
+  }
+}
