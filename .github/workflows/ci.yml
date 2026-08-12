@@ -42,6 +42,8 @@ jobs:
       - name: Build (tokens → tsup)
         working-directory: packages/react
         run: pnpm build
+        env:
+          NODE_OPTIONS: --max-old-space-size=8192
 
       - name: Lint CSS (stylelint RTL guard)
         working-directory: packages/react
