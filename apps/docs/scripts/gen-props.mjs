@@ -19,7 +19,7 @@
 import ts from 'typescript'
 import { fileURLToPath } from 'node:url'
 import { dirname, join, resolve, relative } from 'node:path'
-import { readdirSync, statSync, writeFileSync, existsSync } from 'node:fs'
+import { readdirSync, statSync, writeFileSync, existsSync, mkdirSync } from 'node:fs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const docsRoot = resolve(__dirname, '..')
@@ -130,6 +130,7 @@ for (const sf of program.getSourceFiles()) {
   })
 }
 
+mkdirSync(dirname(outFile), { recursive: true })
 writeFileSync(outFile, JSON.stringify(result, null, 2) + '\n', 'utf8')
 console.log(
   `[gen-props] wrote ${Object.keys(result).length} component prop sets → ${relative(
