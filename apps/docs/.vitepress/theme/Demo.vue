@@ -17,10 +17,8 @@ defineProps<{ name: string; title?: string }>()
   border: 1px solid var(--vp-c-divider);
   border-radius: 14px;
   overflow: hidden;
-  background:
-    radial-gradient(120% 120% at 0% 0%, rgba(56, 189, 248, 0.08), transparent 60%),
-    radial-gradient(120% 120% at 100% 100%, rgba(129, 140, 248, 0.08), transparent 60%),
-    var(--lucent-demo-bg, #0a0e1a);
+  /* Background + shadow live in custom.css so they can adapt to the active
+     light/dark appearance. */
 }
 .lucent-demo__caption {
   font-size: 0.75rem;

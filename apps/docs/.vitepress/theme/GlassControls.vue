@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
+import { useData } from 'vitepress'
 import {
   setTheme,
   setAccent,
@@ -13,14 +14,29 @@ import {
   GLASS_BLUR_MAX,
 } from '@lucent/react/theme'
 
+// Keep the Lucent component theme in lock-step with VitePress's light/dark
+// appearance so examples never look dark on a light page (or vice-versa).
+const { isDark } = useData()
+
 const open = ref(false)
-const theme = ref<'dark' | 'light'>('dark')
+const theme = ref<'dark' | 'light'>(isDark.value ? 'dark' : 'light')
 const accent = ref<'cyan' | 'violet' | 'teal'>('cyan')
 const density = ref<'airy' | 'balanced' | 'compact'>('airy')
 const opacity = ref(GLASS_OPACITY_DEFAULT)
 const blur = ref(12)
 const solid = ref(false)
 const rtl = ref(false)
+
+// Sync Lucent's data-theme with the VitePress appearance toggle (runs immediately
+// on mount and whenever the user flips the site's light/dark switch).
+watch(
+  isDark,
+  (dark) => {
+    theme.value = dark ? 'dark' : 'light'
+    setTheme(theme.value)
+  },
+  { immediate: true },
+)
 
 function applyTheme() {
   setTheme(theme.value)
