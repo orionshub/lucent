@@ -119,7 +119,7 @@ export default function GlassControlsPanel() {
   }
 
   return (
-    <div style={{ position: 'fixed', insetInlineEnd: 16, insetBlockEnd: 16, zIndex: 60, fontFamily: 'var(--lucent-font-sans)' }}>
+    <div style={{ position: 'fixed', insetInlineEnd: 16, insetBlockEnd: 16, zIndex: 40, fontFamily: 'var(--lucent-font-sans)' }}>
       {open && (
         <GlassSurface
           style={{
