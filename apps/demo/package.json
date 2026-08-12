@@ -1,7 +1,7 @@
 {
   "name": "@lucent/demo",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@lucent/react": "workspace:*",
+    "@orionshub/lucent": "workspace:*",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },

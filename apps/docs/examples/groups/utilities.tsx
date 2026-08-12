@@ -1,6 +1,6 @@
 /* eslint-disable */
 // Live examples — Utilities. Each export is mounted as a client-only React island.
-import { Slot, VisuallyHidden, AccessibleIcon, Portal, Button, GlassSurface, Text } from '@lucent/react'
+import { Slot, VisuallyHidden, AccessibleIcon, Portal, Button, GlassSurface, Text } from '@orionshub/lucent'
 import { useState } from 'react'
 
 const row: React.CSSProperties = { display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }

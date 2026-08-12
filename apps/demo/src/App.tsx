@@ -61,7 +61,7 @@ import {
   Spinner,
   Skeleton,
   EmptyState,
-} from '@lucent/react';
+} from '@orionshub/lucent';
 import './style.css';
 
 /* ─── Icons (bring-your-own — Lucent ships none) ─────────────────────── */

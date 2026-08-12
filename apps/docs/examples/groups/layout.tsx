@@ -1,6 +1,6 @@
 /* eslint-disable */
 // Live examples — Layout.
-import { Box, Flex, Grid, Card, ScrollArea, Accordion, Collapsible, Tabs, Badge, Button, Text, Heading } from '@lucent/react'
+import { Box, Flex, Grid, Card, ScrollArea, Accordion, Collapsible, Tabs, Badge, Button, Text, Heading } from '@orionshub/lucent'
 
 const cell: React.CSSProperties = {
   background: 'hsl(var(--lucent-surface))',

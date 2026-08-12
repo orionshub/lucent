@@ -1,9 +1,9 @@
 {
   "name": "@lucent/docs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
-  "description": "VitePress documentation site for @lucent/react",
+  "description": "VitePress documentation site for @orionshub/lucent",
   "scripts": {
     "predocs:dev": "node scripts/gen-props.mjs && node scripts/gen-pages.mjs",
     "docs:dev": "vitepress dev",
@@ -13,7 +13,7 @@
     "dev": "pnpm run docs:gen && vitepress dev"
   },
   "dependencies": {
-    "@lucent/react": "workspace:*",
+    "@orionshub/lucent": "workspace:*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

@@ -13,7 +13,7 @@ import {
   Box,
   Text,
   Link,
-} from '@lucent/react'
+} from '@orionshub/lucent'
 
 const row: React.CSSProperties = { display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }
 

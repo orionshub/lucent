@@ -1,7 +1,7 @@
 /**
  * setters.ts — Guarded imperative theming setters
  *
- * The ONLY module in @lucent/react that is allowed to touch `document`.
+ * The ONLY module in @orionshub/lucent that is allowed to touch `document`.
  * (D-09: value storage ≠ propagation — LucentProvider holds values in
  * React context; propagation is pure CSS cascade via :root attributes/vars)
  *

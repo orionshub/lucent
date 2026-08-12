@@ -1,5 +1,5 @@
 /**
- * tree-shake.fixture.mjs — Smoke tree-shake test for @lucent/react (FND-01)
+ * tree-shake.fixture.mjs — Smoke tree-shake test for @orionshub/lucent (FND-01)
  *
  * Imports ONLY the GlassSurface entry from the built dist and verifies:
  *   1. The import succeeds (exports map is correct)

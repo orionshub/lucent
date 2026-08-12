@@ -67,7 +67,7 @@ export default defineConfig({
       '/components/': componentSidebar,
     },
     search: { provider: 'local' },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/your-org/lucent' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/orionshub/lucent' }],
     outline: { level: [2, 3] },
     footer: {
       message: 'Released under the MIT License.',
@@ -87,7 +87,7 @@ export default defineConfig({
     ssr: {
       // Keep the library out of the SSR externalization path so its ESM +
       // "use client" boundaries resolve cleanly during static rendering.
-      noExternal: ['@lucent/react'],
+      noExternal: ['@orionshub/lucent'],
     },
   },
 })

@@ -2,8 +2,8 @@
 
 // A client island importing an interactive, "use client" component (Dialog).
 // Its presence proves the preserved "use client" boundary compiles under RSC.
-import { Dialog } from '@lucent/react/dialog'
-import { Button } from '@lucent/react/button'
+import { Dialog } from '@orionshub/lucent/dialog'
+import { Button } from '@orionshub/lucent/button'
 
 export function ClientBits() {
   return (

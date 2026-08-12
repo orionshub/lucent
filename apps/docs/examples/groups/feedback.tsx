@@ -2,7 +2,7 @@
 // Live examples — Feedback.
 import { useState } from 'react'
 import { createPortal } from 'react-dom'
-import { Toast, ToastProvider, Spinner, Skeleton, EmptyState, Button } from '@lucent/react'
+import { Toast, ToastProvider, Spinner, Skeleton, EmptyState, Button } from '@orionshub/lucent'
 
 function PlusIcon() {
   return (

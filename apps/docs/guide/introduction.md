@@ -11,7 +11,7 @@ overlays — while staying extremely lightweight.
 - **Zero style runtime.** Components emit stable class names and read design tokens from CSS custom
   properties. All theming lives in a compiled `styles.css`. No emotion, no styled-components.
 - **Per-component tree-shaking.** Import from the root barrel for DX, or from a subpath
-  (`@lucent/react/button`) for guaranteed pruning. `sideEffects: ["**/*.css"]` keeps CSS intact.
+  (`@orionshub/lucent/button`) for guaranteed pruning. `sideEffects: ["**/*.css"]` keeps CSS intact.
 - **Accessible behavior.** Interactive components are built on [Radix UI](https://www.radix-ui.com/)
   primitives, kept external so consumers dedupe a single copy.
 - **Dark-mode-first**, with a light theme, three accent presets, and three density scales — all

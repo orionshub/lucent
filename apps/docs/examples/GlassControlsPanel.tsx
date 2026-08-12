@@ -25,7 +25,7 @@ import {
   SelectIcon,
   SelectContent,
   SelectItem,
-} from '@lucent/react'
+} from '@orionshub/lucent'
 
 type Theme = 'dark' | 'light'
 type Accent = 'cyan' | 'violet' | 'teal'

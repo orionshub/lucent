@@ -7,7 +7,7 @@
  *
  * Security: accepts children as React nodes only (no dangerouslySetInnerHTML).
  * Consumers may wrap any content in GlassSurface; the glass effect comes
- * from importing `@lucent/react/glass.css`.
+ * from importing `@orionshub/lucent/glass.css`.
  */
 
 import React from 'react';

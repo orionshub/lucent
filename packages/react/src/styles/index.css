@@ -2,7 +2,7 @@
  * src/styles/index.css — Aggregated stylesheet
  *
  * Consumers import this for the complete Lucent style baseline:
- *   import '@lucent/react/styles.css';
+ *   import '@orionshub/lucent/styles.css';
  *
  * Imports in dependency order:
  *   1. tokens.css — all --lucent-* CSS custom properties (dark defaults)
@@ -10,7 +10,7 @@
  *   3. motion.css — duration/easing tokens + reduced-motion policy
  *
  * Theme / accent / density variants are imported separately IF needed:
- *   import '@lucent/react/styles.css';               -- dark defaults
+ *   import '@orionshub/lucent/styles.css';               -- dark defaults
  *   (LucentProvider applies data-theme/data-accent/data-density on <html>
  *    at runtime, triggering the override blocks in tokens.css variants)
  */

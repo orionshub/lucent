@@ -1,13 +1,13 @@
 /**
- * @lucent/react — public root barrel
+ * @orionshub/lucent — public root barrel
  *
  * Side-effect-free: no CSS imports in JS.
  * CSS ships via the *.css subpath exports in package.json:
- *   import '@lucent/react/styles.css'   — aggregated tokens + glass + motion
- *   import '@lucent/react/glass.css'    — glass surface only
- *   import '@lucent/react/fonts.css'    — opt-in Space Grotesk font-face
- *   import '@lucent/react/theme.css'    — ThemePanel styles
- *   import '@lucent/react/tailwind'     — Tailwind v4 @theme preset
+ *   import '@orionshub/lucent/styles.css'   — aggregated tokens + glass + motion
+ *   import '@orionshub/lucent/glass.css'    — glass surface only
+ *   import '@orionshub/lucent/fonts.css'    — opt-in Space Grotesk font-face
+ *   import '@orionshub/lucent/theme.css'    — ThemePanel styles
+ *   import '@orionshub/lucent/tailwind'     — Tailwind v4 @theme preset
  */
 
 // ─── Utilities ─────────────────────────────────────────────────────────────
@@ -169,6 +169,6 @@ export type { EmptyStateProps } from './primitives/EmptyState/EmptyState';
 
 // ─── Design tokens (typed TS map) ─────────────────────────────────────────
 // Re-exported via the ./tokens subpath; also available here for convenience.
-// import type { LucentBg } from '@lucent/react' (from the generated TS map)
+// import type { LucentBg } from '@orionshub/lucent' (from the generated TS map)
 export * from './tokens/index';
 

@@ -11,7 +11,7 @@ descendant of `<html>`, it inherits every token automatically — themed glass, 
 current opacity — with no configuration:
 
 ```tsx
-import { Portal, GlassSurface } from '@lucent/react'
+import { Portal, GlassSurface } from '@orionshub/lucent'
 
 // Rendered into <body>, yet still fully themed from :root
 <Portal>
@@ -36,7 +36,7 @@ outside any filtered/transformed ancestor:
 
 ```tsx
 import { createPortal } from 'react-dom'
-import { Toast, ToastProvider } from '@lucent/react'
+import { Toast, ToastProvider } from '@orionshub/lucent'
 
 <ToastProvider>
   {/* ...your Toast.Root(s)... */}

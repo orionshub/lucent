@@ -1,173 +1,173 @@
 [
   {
-    "name": "@lucent/react — GlassSurface",
+    "name": "@orionshub/lucent — GlassSurface",
     "path": "./dist/primitives/GlassSurface/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom"]
   },
   {
-    "name": "@lucent/react — theme (LucentProvider + useLucent + ThemePanel)",
+    "name": "@orionshub/lucent — theme (LucentProvider + useLucent + ThemePanel)",
     "path": "./dist/theme/index.js",
     "limit": "8 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — root barrel",
+    "name": "@orionshub/lucent — root barrel",
     "path": "./dist/index.js",
     "limit": "36 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — tokens",
+    "name": "@orionshub/lucent — tokens",
     "path": "./dist/tokens/index.js",
     "limit": "4 KB"
   },
   {
-    "name": "@lucent/react — Button",
+    "name": "@orionshub/lucent — Button",
     "path": "./dist/primitives/Button/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — IconButton",
+    "name": "@orionshub/lucent — IconButton",
     "path": "./dist/primitives/IconButton/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — Link",
+    "name": "@orionshub/lucent — Link",
     "path": "./dist/primitives/Link/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — Text",
+    "name": "@orionshub/lucent — Text",
     "path": "./dist/primitives/Text/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom"]
   },
   {
-    "name": "@lucent/react — Heading",
+    "name": "@orionshub/lucent — Heading",
     "path": "./dist/primitives/Heading/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom"]
   },
   {
-    "name": "@lucent/react — Badge",
+    "name": "@orionshub/lucent — Badge",
     "path": "./dist/primitives/Badge/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom"]
   },
   {
-    "name": "@lucent/react — Kbd",
+    "name": "@orionshub/lucent — Kbd",
     "path": "./dist/primitives/Kbd/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom"]
   },
   {
-    "name": "@lucent/react — Separator",
+    "name": "@orionshub/lucent — Separator",
     "path": "./dist/primitives/Separator/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — AspectRatio",
+    "name": "@orionshub/lucent — AspectRatio",
     "path": "./dist/primitives/AspectRatio/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — Avatar",
+    "name": "@orionshub/lucent — Avatar",
     "path": "./dist/primitives/Avatar/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — Portal",
+    "name": "@orionshub/lucent — Portal",
     "path": "./dist/utils/Portal/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — Slot",
+    "name": "@orionshub/lucent — Slot",
     "path": "./dist/utils/Slot/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — VisuallyHidden",
+    "name": "@orionshub/lucent — VisuallyHidden",
     "path": "./dist/utils/VisuallyHidden/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — AccessibleIcon",
+    "name": "@orionshub/lucent — AccessibleIcon",
     "path": "./dist/utils/AccessibleIcon/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — Label",
+    "name": "@orionshub/lucent — Label",
     "path": "./dist/primitives/Label/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom"]
   },
   {
-    "name": "@lucent/react — Input",
+    "name": "@orionshub/lucent — Input",
     "path": "./dist/primitives/Input/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — Textarea",
+    "name": "@orionshub/lucent — Textarea",
     "path": "./dist/primitives/Textarea/index.js",
     "limit": "1.5 KB",
     "ignore": ["react", "react-dom"]
   },
   {
-    "name": "@lucent/react — FormField",
+    "name": "@orionshub/lucent — FormField",
     "path": "./dist/primitives/FormField/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom"]
   },
   {
-    "name": "@lucent/react — Checkbox",
+    "name": "@orionshub/lucent — Checkbox",
     "path": "./dist/primitives/Checkbox/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — Switch",
+    "name": "@orionshub/lucent — Switch",
     "path": "./dist/primitives/Switch/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — Toggle",
+    "name": "@orionshub/lucent — Toggle",
     "path": "./dist/primitives/Toggle/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — ToggleGroup",
+    "name": "@orionshub/lucent — ToggleGroup",
     "path": "./dist/primitives/ToggleGroup/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — RadioGroup",
+    "name": "@orionshub/lucent — RadioGroup",
     "path": "./dist/primitives/RadioGroup/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — Slider",
+    "name": "@orionshub/lucent — Slider",
     "path": "./dist/primitives/Slider/index.js",
     "limit": "2 KB",
     "ignore": ["react", "react-dom", "radix-ui"]
   },
   {
-    "name": "@lucent/react — Select",
+    "name": "@orionshub/lucent — Select",
     "path": "./dist/primitives/Select/index.js",
     "limit": "4 KB",
     "ignore": ["react", "react-dom", "radix-ui"]

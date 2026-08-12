@@ -21,9 +21,9 @@ Plus a **contrast** axis (`default` / `solid`) for a fully opaque, high-contrast
 `<ThemePanel>` exposes every axis with no wiring. Import its styles and drop it in:
 
 ```tsx
-import { LucentProvider, ThemePanel } from '@lucent/react'
-import '@lucent/react/styles.css'
-import '@lucent/react/theme.css'
+import { LucentProvider, ThemePanel } from '@orionshub/lucent'
+import '@orionshub/lucent/styles.css'
+import '@orionshub/lucent/theme.css'
 
 export function Settings() {
   return (
@@ -49,7 +49,7 @@ import {
   setGlassOpacity,
   setGlassBlur,
   setContrast,
-} from '@lucent/react/theme'
+} from '@orionshub/lucent/theme'
 
 setTheme('light')          // 'dark' | 'light'
 setAccent('violet')        // 'cyan' | 'violet' | 'teal'
@@ -67,7 +67,7 @@ setContrast('solid')       // 'default' | 'solid'
 Inside a `LucentProvider`, `useLucent()` returns the current axis values:
 
 ```tsx
-import { useLucent } from '@lucent/react'
+import { useLucent } from '@orionshub/lucent'
 
 function Readout() {
   const { theme, accent, density, glassOpacity, glassBlur, contrast } = useLucent()

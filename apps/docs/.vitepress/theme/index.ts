@@ -8,8 +8,8 @@ import Demo from './Demo.vue'
 
 // The library's compiled CSS — the one-time import consumers make.
 // Loaded once here so every live example on the docs renders themed glass.
-import '@lucent/react/styles.css'
-import '@lucent/react/theme.css'
+import '@orionshub/lucent/styles.css'
+import '@orionshub/lucent/theme.css'
 import './custom.css'
 
 export default {

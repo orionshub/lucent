@@ -5,7 +5,7 @@
  * bundles a real single-component import via the per-component SUBPATH export — the
  * guaranteed-pruning entry point — and proves unrelated components are excluded:
  *
- *   1. Bundle `import { Button } from '@lucent/react/button'` with esbuild.
+ *   1. Bundle `import { Button } from '@orionshub/lucent/button'` with esbuild.
  *   2. Bundle the whole root barrel (`import * as Lucent`) for comparison.
  *   3. Assert the subpath bundle is a small fraction of the full barrel.
  *   4. Assert unrelated components' class-name strings (which survive minification)

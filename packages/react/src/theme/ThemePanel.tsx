@@ -10,7 +10,7 @@
  * appears per D-10a policy.
  *
  * Import the CSS separately (side-effect free barrel):
- *   import '@lucent/react/theme.css';
+ *   import '@orionshub/lucent/theme.css';
  *
  * Security: label text is React text nodes only (no innerHTML).
  */

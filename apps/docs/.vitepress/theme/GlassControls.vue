@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useData } from 'vitepress'
-import { setTheme } from '@lucent/react/theme'
+import { setTheme } from '@orionshub/lucent/theme'
 
 // The panel UI itself is a React island built from Lucent's own components
 // (Select / Slider / Switch / Button / GlassSurface) — the docs dogfood the library.

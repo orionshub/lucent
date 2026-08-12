@@ -15,7 +15,7 @@ Because it is a CSS variable on `:root`, updating it re-skins **every** surface 
 the style path and no React re-render:
 
 ```ts
-import { setGlassOpacity, setGlassBlur } from '@lucent/react/theme'
+import { setGlassOpacity, setGlassBlur } from '@orionshub/lucent/theme'
 
 setGlassOpacity(0.9) // more opaque → higher text contrast
 setGlassBlur(6)      // less backdrop blur
@@ -35,7 +35,7 @@ inaccessible surface.
 For users who need maximum contrast — or environments like `forced-colors` — switch to solid mode:
 
 ```ts
-import { setContrast } from '@lucent/react/theme'
+import { setContrast } from '@orionshub/lucent/theme'
 
 setContrast('solid')   // fully opaque surfaces, no blur
 setContrast('default') // back to glass

@@ -1,7 +1,7 @@
 # Publishing & Packaging
 
 Lucent enforces a production **publish gate** so a broken package can never ship. Everything below runs
-in CI and locally via `pnpm --filter @lucent/react ci`.
+in CI and locally via `pnpm --filter @orionshub/lucent ci`.
 
 ## The gate
 
@@ -49,7 +49,7 @@ pnpm changeset
 pnpm changeset version
 
 # 3. Build, run the full gate, then publish
-pnpm --filter @lucent/react ci
+pnpm --filter @orionshub/lucent ci
 pnpm release   # runs `changeset publish`
 ```
 

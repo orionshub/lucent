@@ -27,7 +27,7 @@ examples flip in place.
 orientation, menu placement) matches the visual direction:
 
 ```tsx
-import { LucentProvider } from '@lucent/react'
+import { LucentProvider } from '@orionshub/lucent'
 
 <LucentProvider dir="rtl">
   {children}

@@ -116,15 +116,15 @@ function renderPage(c, examples) {
   lines.push('')
   lines.push(c.blurb)
   lines.push('')
-  lines.push(`**Group:** ${c.group} · **Import path:** \`@lucent/react${c.subpath.slice(1)}\` · ${ssrLine}`)
+  lines.push(`**Group:** ${c.group} · **Import path:** \`@orionshub/lucent${c.subpath.slice(1)}\` · ${ssrLine}`)
   lines.push('')
 
   // Import
   lines.push('## Import')
   lines.push('')
   lines.push('```tsx')
-  lines.push(`import { ${importNames} } from '@lucent/react'`)
-  lines.push("import '@lucent/react/styles.css' // once, at your app root")
+  lines.push(`import { ${importNames} } from '@orionshub/lucent'`)
+  lines.push("import '@orionshub/lucent/styles.css' // once, at your app root")
   lines.push('```')
   lines.push('')
 
@@ -173,7 +173,7 @@ function renderPage(c, examples) {
   lines.push('')
   lines.push('::: tip One-time CSS import')
   lines.push(
-    "Import the compiled stylesheet **once** at your app root: `import '@lucent/react/styles.css'`. " +
+    "Import the compiled stylesheet **once** at your app root: `import '@orionshub/lucent/styles.css'`. " +
       'Components ship stable class names and read design tokens from CSS custom properties — there is no style runtime. ' +
       'See [CSS Import](/guide/css-import).',
   )

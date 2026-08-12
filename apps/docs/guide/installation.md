@@ -8,15 +8,15 @@ regular dependency kept external so your app dedupes a single copy.
 ::: code-group
 
 ```bash [pnpm]
-pnpm add @lucent/react
+pnpm add @orionshub/lucent
 ```
 
 ```bash [npm]
-npm install @lucent/react
+npm install @orionshub/lucent
 ```
 
 ```bash [yarn]
-yarn add @lucent/react
+yarn add @orionshub/lucent
 ```
 
 :::
@@ -32,7 +32,7 @@ pnpm add react react-dom
 Components are unstyled until you import the compiled CSS **once** at your app root:
 
 ```ts
-import '@lucent/react/styles.css'
+import '@orionshub/lucent/styles.css'
 ```
 
 See [CSS Import](/guide/css-import) for the full list of optional stylesheets (glass-only, fonts,
@@ -41,8 +41,8 @@ theme panel, Tailwind preset).
 ## Use a component
 
 ```tsx
-import { Button } from '@lucent/react'
-import '@lucent/react/styles.css'
+import { Button } from '@orionshub/lucent'
+import '@orionshub/lucent/styles.css'
 
 export function App() {
   return <Button variant="solid">Hello Lucent</Button>
@@ -56,7 +56,7 @@ components read their defaults straight from `:root`. Add it when you want SSR n
 theme, or the `useLucent` hook.
 
 ```tsx
-import { LucentProvider } from '@lucent/react'
+import { LucentProvider } from '@orionshub/lucent'
 
 export function App({ children }) {
   return <LucentProvider>{children}</LucentProvider>

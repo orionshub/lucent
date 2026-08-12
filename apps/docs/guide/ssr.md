@@ -12,9 +12,9 @@ Component, and an interactive one drops its own boundary:
 
 ```tsx
 // app/page.tsx — a Server Component
-import { Card } from '@lucent/react/card'
-import { Button } from '@lucent/react/button'
-import '@lucent/react/styles.css'
+import { Card } from '@orionshub/lucent/card'
+import { Button } from '@orionshub/lucent/button'
+import '@orionshub/lucent/styles.css'
 
 export default function Page() {
   return (
@@ -27,9 +27,9 @@ export default function Page() {
 ```
 
 ::: tip Import server-safe components via subpaths in Server Components
-The **root barrel** (`@lucent/react`) re-exports the theming provider, which uses React
+The **root barrel** (`@orionshub/lucent`) re-exports the theming provider, which uses React
 hooks — so it is intended for client trees. In a **Server Component**, import server-safe
-components from their **per-component subpath** (`@lucent/react/card`, `@lucent/react/button`, …).
+components from their **per-component subpath** (`@orionshub/lucent/card`, `@orionshub/lucent/button`, …).
 Interactive components carry their own `"use client"`, so importing them (from a client file, or
 as a rendered child) drops a client boundary automatically.
 :::
@@ -43,7 +43,7 @@ If you persist a theme and server-render, set the `:root` attributes **before fi
 flash of the default theme. Inject the no-flash script into `<head>`:
 
 ```tsx
-import { noFlashScript } from '@lucent/react/no-flash'
+import { noFlashScript } from '@orionshub/lucent/no-flash'
 
 // Next.js App Router — app/layout.tsx (a Server Component)
 export default function RootLayout({ children }) {
@@ -63,7 +63,7 @@ attributes synchronously — no template literals, no `eval`, safe to inline.
 
 ## CSS import location
 
-Import `@lucent/react/styles.css` once in the root layout (`app/layout.tsx`) or `_app.tsx`. It is a
+Import `@orionshub/lucent/styles.css` once in the root layout (`app/layout.tsx`) or `_app.tsx`. It is a
 side-effect CSS import and is safe during SSR.
 
 ## The docs prove it

@@ -1,7 +1,7 @@
 /* eslint-disable */
 // Live examples — Theming.
 import { Fragment } from 'react'
-import { LucentProvider, useLucent, ThemePanel, GlassSurface, Text, Heading } from '@lucent/react'
+import { LucentProvider, useLucent, ThemePanel, GlassSurface, Text, Heading } from '@orionshub/lucent'
 
 // #region lucent-provider-basic
 function AxisReadout() {

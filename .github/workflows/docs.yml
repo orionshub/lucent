@@ -41,7 +41,7 @@ jobs:
       # The docs import the published dist (not src), proving SSR-safety against
       # the real package. Build the library first.
       - name: Build library
-        run: pnpm --filter @lucent/react build
+        run: pnpm --filter @orionshub/lucent build
         env:
           NODE_OPTIONS: --max-old-space-size=8192
 

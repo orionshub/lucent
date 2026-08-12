@@ -5,7 +5,7 @@
  * and exposed via the `./theme.css` subpath export.
  *
  * Consumers import separately:
- *   import '@lucent/react/theme.css';
+ *   import '@orionshub/lucent/theme.css';
  *
  * All properties use CSS logical equivalents (stylelint enforces this).
  * Spacing consumes density-aware tokens.

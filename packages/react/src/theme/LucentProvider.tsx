@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * LucentProvider — the runtime theming spine for @lucent/react
+ * LucentProvider — the runtime theming spine for @orionshub/lucent
  *
  * The SINGLE module allowed to touch `document` (D-09).
  * All four axis VALUES are held in React context for control UIs + persistence.

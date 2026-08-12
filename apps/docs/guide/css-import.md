@@ -9,7 +9,7 @@ At your app root (e.g. `main.tsx`, `_app.tsx`, or the root layout), import the a
 **once**:
 
 ```ts
-import '@lucent/react/styles.css'
+import '@orionshub/lucent/styles.css'
 ```
 
 This single file includes the design tokens (`:root` custom properties), the glass layer, motion
@@ -20,24 +20,24 @@ never adds more style code to parse at runtime.
 
 | Import | Contents | When to use |
 | --- | --- | --- |
-| `@lucent/react/styles.css` | Tokens + glass + motion + **all component styles** | Always — the one-time import |
-| `@lucent/react/glass.css` | The glass surface layer only | Advanced: composing your own build |
-| `@lucent/react/fonts.css` | Opt-in Space Grotesk `@font-face` | Only if you want the bundled display font |
-| `@lucent/react/theme.css` | `ThemePanel` component styles | Only if you render `<ThemePanel>` |
-| `@lucent/react/tailwind` | Tailwind v4 `@theme` preset | Optional: consuming tokens in Tailwind |
+| `@orionshub/lucent/styles.css` | Tokens + glass + motion + **all component styles** | Always — the one-time import |
+| `@orionshub/lucent/glass.css` | The glass surface layer only | Advanced: composing your own build |
+| `@orionshub/lucent/fonts.css` | Opt-in Space Grotesk `@font-face` | Only if you want the bundled display font |
+| `@orionshub/lucent/theme.css` | `ThemePanel` component styles | Only if you render `<ThemePanel>` |
+| `@orionshub/lucent/tailwind` | Tailwind v4 `@theme` preset | Optional: consuming tokens in Tailwind |
 
 ## Tree-shaking
 
-`@lucent/react` sets `sideEffects: ["**/*.css"]`. That tells your bundler every `.js` module is
+`@orionshub/lucent` sets `sideEffects: ["**/*.css"]`. That tells your bundler every `.js` module is
 prunable, while never dropping the CSS side-effect import. Combined with per-component subpath
 exports, you only ship the JavaScript for the components you actually import:
 
 ```ts
 // Root barrel — tree-shaken by modern bundlers
-import { Button } from '@lucent/react'
+import { Button } from '@orionshub/lucent'
 
 // Subpath — guarantees pruning, also great for non-bundler/Node consumers
-import { Button } from '@lucent/react/button'
+import { Button } from '@orionshub/lucent/button'
 ```
 
 The CSS is global regardless of which import style you use — that is intentional and keeps the

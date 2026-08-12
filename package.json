@@ -8,9 +8,9 @@
   },
   "scripts": {
     "dev": "pnpm --filter @lucent/demo dev",
-    "build": "pnpm --filter @lucent/react build",
-    "test": "pnpm --filter @lucent/react test",
-    "ci": "pnpm --filter @lucent/react ci",
+    "build": "pnpm --filter @orionshub/lucent build",
+    "test": "pnpm --filter @orionshub/lucent test",
+    "ci": "pnpm --filter @orionshub/lucent ci",
     "release": "changeset publish"
   },
   "devDependencies": {

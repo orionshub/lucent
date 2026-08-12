@@ -11,7 +11,7 @@
  *
  * Usage:
  *   // Next.js App Router (layout.tsx — a Server Component):
- *   import { noFlashScript } from '@lucent/react/no-flash';
+ *   import { noFlashScript } from '@orionshub/lucent/no-flash';
  *   export default function RootLayout({ children }) {
  *     return (
  *       <html>

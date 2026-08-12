@@ -1,6 +1,6 @@
 /* eslint-disable */
 // Live examples — Data Display.
-import { Table, Callout, Progress, AvatarGroup, Avatar } from '@lucent/react'
+import { Table, Callout, Progress, AvatarGroup, Avatar } from '@orionshub/lucent'
 
 // #region table-basic
 export function TableBasic() {

@@ -1,14 +1,14 @@
 /**
- * @lucent/react/fonts.css — opt-in font face declarations
+ * @orionshub/lucent/fonts.css — opt-in font face declarations
  *
  * Consumers import this ONLY if they want to self-host Space Grotesk.
- * Zero bytes in the core bundle — never imported by @lucent/react itself.
+ * Zero bytes in the core bundle — never imported by @orionshub/lucent itself.
  *
  * The system-first fallback stack in --lucent-font-sans works without this.
  * For best results, also add <link rel="preload"> for the woff2 files.
  *
  * Usage (in app root):
- *   import '@lucent/react/fonts.css';
+ *   import '@orionshub/lucent/fonts.css';
  */
 
 @font-face {

@@ -1,15 +1,15 @@
 {
   "name": "@lucent/next-smoke",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "description": "Minimal Next.js App Router smoke build — proves @lucent/react SSR + \"use client\" boundaries under a real RSC compiler (DOCS-03).",
+  "description": "Minimal Next.js App Router smoke build — proves @orionshub/lucent SSR + \"use client\" boundaries under a real RSC compiler (DOCS-03).",
   "scripts": {
     "build": "next build",
     "start": "next start",
     "dev": "next dev"
   },
   "dependencies": {
-    "@lucent/react": "workspace:*",
+    "@orionshub/lucent": "workspace:*",
     "next": "^15.1.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

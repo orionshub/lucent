@@ -2,8 +2,8 @@
 // injects the no-flash theme script from the server-safe ./no-flash subpath
 // (proves both are SSR-safe in an RSC tree).
 import type { ReactNode } from 'react'
-import { noFlashScript } from '@lucent/react/no-flash'
-import '@lucent/react/styles.css'
+import { noFlashScript } from '@orionshub/lucent/no-flash'
+import '@orionshub/lucent/styles.css'
 
 export const metadata = {
   title: 'Lucent — Next.js smoke',

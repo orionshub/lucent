@@ -19,7 +19,7 @@ import {
   SelectIcon,
   SelectContent,
   SelectItem,
-} from '@lucent/react'
+} from '@orionshub/lucent'
 
 const stack: React.CSSProperties = { display: 'flex', flexDirection: 'column', gap: 12, width: 300 }
 const row: React.CSSProperties = { display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }
