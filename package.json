@@ -8,9 +8,10 @@
   },
   "scripts": {
     "dev": "pnpm --filter @lucent/demo dev",
-    "build": "pnpm --filter @orionshub/lucent build",
+    "build": "pnpm --filter @orionshub/lucent build && pnpm --filter glassui build",
+    "build:glassui": "pnpm --filter glassui build",
     "test": "pnpm --filter @orionshub/lucent test",
-    "ci": "pnpm --filter @orionshub/lucent ci",
+    "ci": "pnpm --filter @orionshub/lucent ci && pnpm --filter glassui build",
     "release": "changeset publish"
   },
   "devDependencies": {

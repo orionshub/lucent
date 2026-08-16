@@ -14,9 +14,9 @@ importers:
 
   apps/demo:
     dependencies:
-      '@orionshub/lucent':
+      glassui:
         specifier: workspace:*
-        version: link:../../packages/react
+        version: link:../../packages/glassui
       react:
         specifier: ^19.2.8
         version: 19.2.8
@@ -96,6 +96,18 @@ importers:
         specifier: ^5.9.2
         version: 5.9.3
 
+  packages/glassui:
+    dependencies:
+      '@orionshub/lucent':
+        specifier: workspace:^
+        version: link:../react
+      react:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 19.2.8
+      react-dom:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 19.2.8(react@19.2.8)
+
   packages/react:
     dependencies:
       radix-ui:
@@ -135,6 +147,9 @@ importers:
       axe-core:
         specifier: ^4.12.0
         version: 4.12.1
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
       esbuild:
         specifier: ^0.21.5
         version: 0.21.5
@@ -2819,6 +2834,11 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  cross-env@7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -7075,6 +7095,10 @@ snapshots:
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 5.9.3
+
+  cross-env@7.0.3:
+    dependencies:
+      cross-spawn: 7.0.6
 
   cross-spawn@7.0.6:
     dependencies:

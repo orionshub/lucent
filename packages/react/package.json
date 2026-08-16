@@ -266,7 +266,7 @@
   },
   "scripts": {
     "build:tokens": "node --import tsx/esm style-dictionary.config.ts",
-    "build": "pnpm run build:tokens && tsup",
+    "build": "pnpm run build:tokens && cross-env NODE_OPTIONS=--max-old-space-size=8192 tsup",
     "lint:css": "stylelint \"src/**/*.css\"",
     "test": "vitest run",
     "qa:publint": "publint",
@@ -285,6 +285,7 @@
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^6.0.4",
     "axe-core": "^4.12.0",
+    "cross-env": "^7.0.3",
     "esbuild": "^0.21.5",
     "happy-dom": "^20.11.1",
     "publint": "^0.3.22",

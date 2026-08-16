@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 
 // Import Lucent styles — tokens, glass surface, motion
-import '@orionshub/lucent/styles.css';
+import 'glassui/styles.css';
 // Import ThemePanel styles
-import '@orionshub/lucent/theme.css';
+import 'glassui/theme.css';
 
 createRoot(document.getElementById('root')!).render(<App />);
