@@ -11,6 +11,10 @@
 
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(120deg, #22d3ee 20%, #818cf8);
+
+  /* Height reserved for the sticky vitreui banner (VitReuiBanner.vue toggles
+     this to 0 when dismissed). Offsets the fixed nav below the banner. */
+  --vp-layout-top-height: 40px;
 }
 
 .dark {

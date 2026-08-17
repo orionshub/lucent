@@ -4,6 +4,7 @@ import { h } from 'vue'
 import ReactIsland from './ReactIsland.vue'
 import PropsTable from './PropsTable.vue'
 import GlassControls from './GlassControls.vue'
+import VitreuiBanner from './VitreuiBanner.vue'
 import Demo from './Demo.vue'
 
 // The library's compiled CSS — the one-time import consumers make.
@@ -16,8 +17,8 @@ export default {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      // Floating runtime-controls panel, present on every page.
-      'layout-top': () => h(GlassControls),
+      // Sticky vitreui notice + floating runtime-controls panel, on every page.
+      'layout-top': () => [h(VitreuiBanner), h(GlassControls)],
     })
   },
   enhanceApp({ app }) {
