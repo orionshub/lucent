@@ -61,7 +61,7 @@ import {
   Spinner,
   Skeleton,
   EmptyState,
-} from 'glassui';
+} from 'vitreui';
 import './style.css';
 
 /* ─── Icons (bring-your-own — Lucent ships none) ─────────────────────── */

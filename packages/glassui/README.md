@@ -1,19 +1,19 @@
-# glassui
+# vitreui
 
-[![npm](https://img.shields.io/npm/v/glassui.svg)](https://www.npmjs.com/package/glassui)
+[![npm](https://img.shields.io/npm/v/vitreui.svg)](https://www.npmjs.com/package/vitreui)
 
-**`glassui` is a published mirror of [`@orionshub/lucent`](https://www.npmjs.com/package/@orionshub/lucent)** — the exact same glassmorphic React component library under a shorter, unscoped name. Install whichever you prefer; the API is identical.
+**`vitreui` is a published mirror of [`@orionshub/lucent`](https://www.npmjs.com/package/@orionshub/lucent)** — the exact same glassmorphic React component library under a shorter, unscoped name. Install whichever you prefer; the API is identical.
 
 A complete, lightweight glassmorphic React component set — with runtime-adjustable transparency for accessibility. Polish without weight.
 
 ## Install
 
 ```bash
-npm install glassui
+npm install vitreui
 # or
-pnpm add glassui
+pnpm add vitreui
 # or
-yarn add glassui
+yarn add vitreui
 ```
 
 React 18 or 19 is a peer dependency.
@@ -21,15 +21,15 @@ React 18 or 19 is a peer dependency.
 ## Use
 
 ```tsx
-import { Button } from 'glassui'
-import 'glassui/styles.css'
+import { Button } from 'vitreui'
+import 'vitreui/styles.css'
 
 export function App() {
   return <Button variant="solid">Hello Lucent</Button>
 }
 ```
 
-Every export, subpath, and stylesheet available on `@orionshub/lucent` is available on `glassui` under the same name.
+Every export, subpath, and stylesheet available on `@orionshub/lucent` is available on `vitreui` under the same name.
 
 ## Docs
 

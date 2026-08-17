@@ -32,9 +32,9 @@ features:
 ---
 
 <div style="max-width: 760px; margin: 2.5rem auto 0; padding: 0.85rem 1.25rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.5rem 0.9rem; text-align: center; border: 1px solid var(--vp-c-divider); border-radius: 14px; background: var(--vp-c-bg-soft);">
-  <span style="font-size: 0.95rem;">📦 Also available as <code>glassui</code> on npm — same library, shorter name.</span>
+  <span style="font-size: 0.95rem;">📦 Also available as <code>vitreui</code> on npm — same library, shorter name.</span>
   <span style="opacity: .7;">
-    <code>npm i glassui</code>
+    <code>npm i vitreui</code>
     <span style="opacity:.5;"> · </span>
     <code>npm i @orionshub/lucent</code>
   </span>

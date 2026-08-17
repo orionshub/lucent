@@ -10,19 +10,19 @@ Lucent ships under two npm names from this one repo:
 | Package | Path | What it is |
 | --- | --- | --- |
 | [`@orionshub/lucent`](https://www.npmjs.com/package/@orionshub/lucent) | `packages/react` | The real library — source, tests, and the full publish gate. |
-| [`glassui`](https://www.npmjs.com/package/glassui) | `packages/glassui` | A generated mirror — every export re-exports the identically-named subpath of `@orionshub/lucent`. |
+| [`vitreui`](https://www.npmjs.com/package/vitreui) | `packages/vitreui` | A generated mirror — every export re-exports the identically-named subpath of `@orionshub/lucent`. |
 
-`glassui` is **auto-generated and always in sync**. Its `scripts/generate.mjs` reads
+`vitreui` is **auto-generated and always in sync**. Its `scripts/generate.mjs` reads
 `@orionshub/lucent`'s `exports` map and regenerates the re-export stubs plus its own `exports` field:
 
-- `pnpm build` (root) builds the library **then** regenerates `glassui`.
-- `glassui`'s `prepublishOnly` regenerates again at publish time, so a stale mirror can never ship.
+- `pnpm build` (root) builds the library **then** regenerates `vitreui`.
+- `vitreui`'s `prepublishOnly` regenerates again at publish time, so a stale mirror can never ship.
 - Changesets `fixed` groups the two packages, so they always share the same version.
 
 To regenerate the mirror on demand:
 
 ```bash
-pnpm --filter glassui build   # or: pnpm build:glassui
+pnpm --filter vitreui build   # or: pnpm build:vitreui
 ```
 
 ## The gate
@@ -72,12 +72,12 @@ pnpm changeset version
 
 # 3. Build, run the full gate, then publish
 pnpm --filter @orionshub/lucent ci
-pnpm release   # runs `changeset publish` — publishes BOTH @orionshub/lucent and glassui
+pnpm release   # runs `changeset publish` — publishes BOTH @orionshub/lucent and vitreui
 ```
 
 Because the two packages are grouped with Changesets `fixed`, a single changeset bumps both to the same
 version, and `pnpm release` publishes each name whose version is not yet on npm. The very first
-`glassui` publish needs no changeset — `changeset publish` ships `glassui@1.0.0` (new on npm) and skips
+`vitreui` publish needs no changeset — `changeset publish` ships `vitreui@1.0.0` (new on npm) and skips
 any already-published `@orionshub/lucent` version.
 
 `pnpm release` publishes to npm. Run it only after the gate is green and you are authenticated

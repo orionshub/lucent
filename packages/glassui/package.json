@@ -1,5 +1,5 @@
 {
-  "name": "glassui",
+  "name": "vitreui",
   "version": "1.0.0",
   "description": "A complete, lightweight glassmorphic React component library — with runtime-adjustable transparency for accessibility. Published mirror of @orionshub/lucent.",
   "type": "module",
@@ -27,7 +27,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/orionshub/lucent.git",
-    "directory": "packages/glassui"
+    "directory": "packages/vitreui"
   },
   "bugs": {
     "url": "https://github.com/orionshub/lucent/issues"

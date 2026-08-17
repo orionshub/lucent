@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * generate.mjs — Builds the `glassui` alias package.
+ * generate.mjs — Builds the `vitreui` alias package.
  *
- * `glassui` is a thin, published mirror of `@orionshub/lucent`. It ships no real
+ * `vitreui` is a thin, published mirror of `@orionshub/lucent`. It ships no real
  * code — every entry re-exports the identically-named subpath of the target so
- * that `import { Button } from 'glassui'` and `import '@orionshub/lucent'` are
+ * that `import { Button } from 'vitreui'` and `import '@orionshub/lucent'` are
  * byte-for-byte the same API. The consumer's bundler dedupes the single real
  * copy of the library.
  *
@@ -13,7 +13,7 @@
  *   • dist/<name>.css                       for every CSS subpath (@import wrapper)
  * then writes the matching `exports` map back into this package's package.json.
  *
- * Run it whenever @orionshub/lucent's exports change:  pnpm --filter glassui build
+ * Run it whenever @orionshub/lucent's exports change:  pnpm --filter vitreui build
  */
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
@@ -21,10 +21,10 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const GLASSUI_ROOT = join(__dirname, '..');
-const TARGET_PKG = join(GLASSUI_ROOT, '..', 'react', 'package.json');
-const SELF_PKG = join(GLASSUI_ROOT, 'package.json');
-const DIST = join(GLASSUI_ROOT, 'dist');
+const PKG_ROOT = join(__dirname, '..');
+const TARGET_PKG = join(PKG_ROOT, '..', 'react', 'package.json');
+const SELF_PKG = join(PKG_ROOT, 'package.json');
+const DIST = join(PKG_ROOT, 'dist');
 
 const TARGET = '@orionshub/lucent';
 
@@ -76,5 +76,5 @@ self.exports = exportsMap;
 writeFileSync(SELF_PKG, `${JSON.stringify(self, null, 2)}\n`);
 
 console.log(
-  `glassui: generated ${jsCount} JS + ${cssCount} CSS entries (${Object.keys(exportsMap).length} total) mirroring ${TARGET}`,
+  `vitreui: generated ${jsCount} JS + ${cssCount} CSS entries (${Object.keys(exportsMap).length} total) mirroring ${TARGET}`,
 );

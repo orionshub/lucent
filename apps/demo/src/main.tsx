@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 
 // Import Lucent styles — tokens, glass surface, motion
-import 'glassui/styles.css';
+import 'vitreui/styles.css';
 // Import ThemePanel styles
-import 'glassui/theme.css';
+import 'vitreui/theme.css';
 
 createRoot(document.getElementById('root')!).render(<App />);

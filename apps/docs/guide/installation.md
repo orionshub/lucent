@@ -7,7 +7,7 @@ regular dependency kept external so your app dedupes a single copy.
 Lucent is published under two npm names — pick whichever you like:
 
 - [`@orionshub/lucent`](https://www.npmjs.com/package/@orionshub/lucent) — the scoped package
-- [`glassui`](https://www.npmjs.com/package/glassui) — a shorter, unscoped mirror
+- [`vitreui`](https://www.npmjs.com/package/vitreui) — a shorter, unscoped mirror
 
 They share the same version and API. Every example below works with either — just swap the package
 name in the import. This guide uses `@orionshub/lucent`.
@@ -20,19 +20,19 @@ name in the import. This guide uses `@orionshub/lucent`.
 ```bash [pnpm]
 pnpm add @orionshub/lucent
 # or the short name:
-pnpm add glassui
+pnpm add vitreui
 ```
 
 ```bash [npm]
 npm install @orionshub/lucent
 # or the short name:
-npm install glassui
+npm install vitreui
 ```
 
 ```bash [yarn]
 yarn add @orionshub/lucent
 # or the short name:
-yarn add glassui
+yarn add vitreui
 ```
 
 :::
